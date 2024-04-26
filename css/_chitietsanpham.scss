@@ -1,0 +1,426 @@
+
+/* FOOTER */
+footer {
+    display: flex;
+    padding: 50px 30px;
+    height: 280px;
+    align-items: center;
+    background-color: black;
+    justify-content: space-around;
+}
+
+.col1 {
+    flex: 1;
+    color: white;
+    padding: 10px 0px;
+    margin-left: 50px;
+
+    img {
+        height: 50px;
+    }
+
+    div {
+        display: flex;
+        line-height: 30px;
+        padding: 5px 0px;
+
+        i {
+            padding-top: 8px;
+        }
+
+        p {
+            font-size: 12px;
+            padding-left: 10px;
+        }
+    }
+}
+
+.col23 {
+    flex: 2;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+        padding: 0px 10px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    ul li {
+        line-height: 35px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+.col4 {
+    flex: 1;
+    text-align: center;
+
+    img {
+        width: 280px;
+    }
+}
+
+/* SẢN PHẨM */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.app-container {
+    padding: 100px 0;
+    background-color: #fafafa;
+    padding-bottom: 0px;
+}
+
+.cartegory-top {
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    font-size: 15px;
+}
+
+.cartegory-top p {
+    padding: 0px 10px;
+}
+
+.chitiet-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.chitiet-container #img_ct {
+    width: 55%;
+    padding: 10px 5%;
+}
+
+.chitiet-container .details-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+
+.details-container div {
+    padding-bottom: 20px;
+}
+
+.details-container .title-sp {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.details-container .price-container .price1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+    padding-bottom: 5px;
+}
+
+.details-container .price-container .price-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.details-container .price-container .price-row .price2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ccc;
+    text-decoration: line-through;
+    padding-right: 40px;
+}
+
+.details-container .price-container .price-row .discount {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+.details-container .color-container p {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.details-container .color-container img {
+    width: 45px;
+}
+
+.details-container .color-container {
+    padding-bottom: 30px;
+}
+
+.details-container .size-container p {
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.details-container .size-container .size-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.details-container .size-container .size-box .size-item {
+    margin-right: 40px;
+    padding: 10px 11px;
+    font-weight: 500 !important;
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+    font-weight: 200;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.size-active {
+    background-color: #333 !important;
+    color: white !important;
+}
+
+.details-container .tt-container p {
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.details-container .tt-container .tt-box li {
+    list-style-type: disc;
+    margin-left: 50px;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.details-container .sl-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.details-container .sl-container p {
+    font-size: 25px;
+    padding-right: 40px;
+    font-weight: bold;
+}
+
+.details-container .sl-container input {
+    padding-left: 10px;
+    width: 50px;
+    font-size: 15px;
+}
+
+.details-container .btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.details-container .btn-container button {
+    width: 35%;
+    height: 45px;
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.details-container .btn-container button:hover {
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+}
+
+.huongdan-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.huongdan-container .hd-size {
+    flex: 1;
+    padding: 10px 20px;
+    padding-left: 40px;
+
+    img {
+        width: 95%;
+    }
+
+    p {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+}
+
+.huongdan-container .hd2 {
+    flex: 1;
+    padding: 15px 20px;
+}
+
+.huongdan-container .hd2 .hd2-item {
+    padding-bottom: 20px;
+
+    p {
+        font-size: 25px;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+
+    ul li {
+        list-style-type: disc;
+        margin-left: 50px;
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+}
+
+.ct-icon {
+    align-content: center;
+    padding-top: 50px;
+
+    img {
+        width: 100%;
+    }
+}
+
+/* ĐỀ XUẤT */
+#blog-container {
+    background-color: #e9e9e9;
+    padding-top: 1px;
+    margin-top: 20px;
+
+    .product-row {
+        .row-title {
+            justify-content: space-between;
+            margin: 50px 50px;
+            margin-top: 80px;
+
+            li {
+                font-size: 18px;
+                font-weight: bold;
+
+                a {
+                    color: black;
+                    text-decoration: underline;
+                }
+            }
+
+            &:first-child {
+                flex: 2;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            &:last-child {
+                right: 0px !important;
+                justify-content: flex-end;
+            }
+        }
+
+        .cartegory-right-content {
+            margin-top: 20px;
+            justify-content: space-between;
+
+            .cartegory-right-content-item {
+                width: calc(25% - 12px);
+                text-align: center;
+                padding: 12px 0;
+                cursor: pointer;
+                transition: transform 0.7s;
+
+                &:hover {
+                    transform: translateY(-0.1in);
+                }
+
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                h1 {
+                    font-size: 18px;
+                    margin: 10px 20px;
+                }
+
+                .price {
+                    font-size: 22px;
+                    font-weight: bold;
+                    padding: 5px 70px;
+                    justify-content: space-around;
+
+                    .price1 {
+                        color: red;
+                    }
+
+                    .price2 {
+                        color: #ccc;
+                        text-decoration: line-through;
+                    }
+                }
+
+                .add-cart {
+                    margin-top: 10px;
+                    padding: 10px 20px;
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: white;
+                    background-color: black;
+                    border: 1px solid black;
+                    border-radius: 10px;
+                    width: 50%;
+                    cursor: pointer;
+                }
+
+                .add-cart:hover {
+                    color: black;
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+.email-discount {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    .title {
+        font-size: 20px;
+        font-weight: bolder;
+        margin: 20px 0;
+    }
+
+    .input-discount {
+        margin: 20px 0px;
+        margin-top: 0px;
+
+        input {
+            height: 40px;
+            width: 25%;
+            padding: 5px 10px;
+        }
+
+        button {
+            height: 40px;
+            width: 12%;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+
+            &:hover {
+                background-color: #333;
+                color: white;
+            }
+        }
+    }
+}
