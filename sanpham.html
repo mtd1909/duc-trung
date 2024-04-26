@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/sanpham.css">
+    <title>Sản phẩm</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="Images/logo.png">
+        </div>
+        <div class="menu">
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="sanpham.html" id="active-menu">SẢN PHẨM</a>
+                <ul class="sub-menu">
+                    <li><a href="sanpham_ao.html">Áo</a>
+                        <ul>
+                            <li>Áo Polo</li>
+                            <li>Áo Hoodie</li>
+                        </ul>
+                    </li>
+                    <li><a href="sanpham_quan.html">Quần</a>
+                        <ul>
+                            <li>Quần Short</li>
+                            <li>Quần dài</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">GIỚI THIỆU</a></li>
+            <li><a href="">BLOG</a></li>
+        </div>
+        <div class="others">
+            <li class="search">
+                <input type="text" placeholder="   Tìm kiếm">
+                <i class="fas fa-search"></i>
+            </li>
+            <li class="icon"><a href=""><i class="fas fa-user"></i></a></li>
+            <li class="icon"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+        </div>
+    </header>
+
+    <!-- SẢN PHẨM -->
+    <section class="cartegory">
+        <div class="container">
+            <div class="cartegory-top row">
+                <p>Trang chủ </p> <span>&#10073;</span> <p><b>Sản phẩm</b></p>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="cartegory-left">
+                        <ul>
+                            <li class="cartegory-left-li block"><a href="#">Danh mục</a> <i class="fas fa-sort-down"></i>
+                                <ul class="row">
+                                    <li><a href="">Quần</a></li>
+                                    <li><a href="">Áo</a></li>
+                                </ul>
+                            </li>
+                            <li class="cartegory-left-li"><a href="">Khoảng giá</a> <i class="fas fa-sort-down"></i>
+                                <div class="price-range row">
+                                    <input type="text" placeholder="Giá tối thiểu" id="min-price">
+                                    <input type="text" placeholder="Giá tối đa" id="max-price">
+                                </div>
+                                <div class="price-btn">
+                                    <button id="delete-price">Xóa lọc</button>
+                                    <button id="apply-price">Áp dụng</button>
+                                </div>
+                            </li>
+                            <li class="cartegory-left-li"><a href="">Màu sắc</a> <i class="fas fa-sort-down"></i></li>
+                            <li class="cartegory-left-li"><a href="">Kích cỡ</a> <i class="fas fa-sort-down"></i>
+                                <ul class="pick-size row">
+                                    <li id="size-S">S</li>
+                                    <li id="size-M">M</li>
+                                    <li id="size-L">L</li>
+                                    <li id="size-XL">XL</li>
+                                </ul>
+                        </ul>
+                    </div>
+
+                    <div class="cartegory-right row">
+                        <div class="cartegory-right-top-item">
+                            <p><i class="fa fa-list"></i> Sắp xếp theo</p>
+                        </div>
+                        <div class="cartegory-right-top-item">
+                            <select name="" id="">
+                                <option value="">Sắp xếp</option>
+                                <option value="">Giá cao đến thấp</option>
+                                <option value="">Giá thấp đến cao</option>
+                            </select>
+                        </div>
+
+                        <div class="cartegory-right-content row" id="products">
+                            <!-- <div class="cartegory-right-content-item">
+                                <img src="Images/ao1.webp" alt="">
+                                <h1>Áo Thun Local Brand Unisex Cat
+                                    On Animal Planet TS230</h1>
+                                <div class="price row">
+                                    <div class="price1">185.000đ</div>
+                                    <div class="price2">350.000đ</div>
+                                </div>
+                                <button class="add-cart">Thêm vào giỏ hàng</button>
+                            </div>-->
+
+                            
+                        </div>
+                        <div class="cartegory-right-bottom row">
+                            <div class="cartegory-right-bottom-item">
+                                <button>1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button id="next-page"><span>&#10095;</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Đề xuất -->
+    <section class="app-container" id="blog-container">
+        <div class="product-row">
+            
+            <div class="row-title row">
+                <li><i class="fa fa-list"></i> Sản phẩm đề xuất</li>
+                <li><a href="sanpham.html">Xem thêm</a></li>
+            </div>
+            <div class="items row" id="product3"></div>
+
+            <div class="email-discount">
+                <div class="title">Đăng ký nhận tin khuyến mãi</div>
+                <div class="input-discount">
+                    <input type="text" placeholder="Nhập email đăng ký">
+                    <button>Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="col1">
+            <img src="Images/logo.png" alt="">
+            <div>
+                <i class="fa fa-map"></i>
+                <p>15 Đường Y, Ngõ 86 Thị trấn Trâu quỳ,
+                    Gia Lâm, Hà Nội</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>090.327.1000</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>quyet.dino@gmail.com</p>
+            </div>
+            <img src="Images/logo_bct.webp">
+        </div>
+
+        <div class="col23">
+            <li>ABOUT US
+                <ul class="info">
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Sản phẩm</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Kiểm tra đơn hàng</a></li>
+                    <li><a href="">Giới thiệu</a></li>
+                </ul>
+            </li>
+
+            <li>CHÍNH SÁCH
+                <ul class="info">
+                    <li><a href="">Chính sách mua hàng</a></li>
+                    <li><a href="">Chính sách bảo mật<a></li>
+                    <li><a href="">Phương thức thanh toán</a></li>
+                    <li><a href="">Chính sách vận chuyển</a></li>
+                    <li><a href="">Chính sách đổi trả</a></li>
+                </ul>
+            </li>
+        </div>
+        <div class="col4">
+            <img src="Images/map.png">
+        </div>
+    </footer>
+
+    <script src="js/sanpham.js"></script>
+</body>
+</html>
