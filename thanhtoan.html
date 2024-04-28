@@ -63,7 +63,7 @@
         </div>
     </header>
 
-    <main class="main-gray">
+    <main class="main-gray main-gray-mobile main-pay">
         <div class="container">
             <!-- ĐƯỜNG DẪN -->
             <div class="breadcrumb">
@@ -134,7 +134,7 @@
                             <img class="pay-product-header__title--icon" src="./Images/i-pay-product.png"/>
                             <div class="pay-product-header__title--text">Đơn hàng (1 sản phẩm)</div>
                         </div>
-                        <div class="pay-product-header__button">Tiếp tục mua hàng</div>
+                        <p class="pay-product-header__button">Tiếp tục mua hàng</p>
                     </div>
                     <div class="pay-product-header-body">
                         <div class="pay-product-header-body__product">
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="pay-product-header-body__product-text-footer">
                                     <div class="pay-product-header-body__product-text-footer--size">Wash/L</div>
-                                    <div class="pay-product-header-body__product-text-footer--qty">Số lượng: 1</div>
+                                    <div class="pay-product-header-body__product-text-footer--qty"><span>Số lượng:</span> 1</div>
                                 </div>
                             </div>
                         </div>
@@ -177,6 +177,62 @@
                             <div class="pay-product-header-body__total-price--price">200.000đ</div>
                         </div>
                         <button class="pay-product-header-body__button">Thanh toán</button>
+                    </div>
+                </div>
+                <div class="info-shipping-mobile">
+                    <div class="info-shipping__title">
+                        <img class="info-shipping__title--icon" src="./Images/i-shipping-fast-black.png"/>
+                        <div class="info-shipping__title--text">Thông tin giao hàng</div>
+                    </div>
+                    <div class="info-shipping__content">
+                        <div class="info-shipping__content--item">
+                            <div class="info-shipping__content--item-title">Họ tên</div>
+                            <input type="text" value="Vũ Đức Thọ">
+                        </div>
+                        <div class="info-shipping__content--item">
+                            <div class="info-shipping__content--item-title">Số điện thoại</div>
+                            <input type="text" value="0353907101">
+                        </div>
+                        <div class="info-shipping__content--item">
+                            <div class="info-shipping__content--item-title">Tỉnh / Thành phố</div>
+                            <div class="info-shipping__content--item-select">
+                                <select name="Tỉnh / Thành phố" id="Tỉnh / Thành phố">
+                                    <option value="Hà Nội">Hà Nội</option>
+                                    <option value="Hải Phòng">Hải Phòng</option>
+                                    <option value="Quảng Ninh">Quảng Ninh</option>
+                                    <option value="Hà Nam">Hà Nam</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="info-shipping__content--item">
+                            <div class="info-shipping__content--item-title">Quận / Huyện</div>
+                            <div class="info-shipping__content--item-select">
+                                <select name="Quận / Huyện" id="Quận / Huyện">
+                                    <option value="Hoàng Mai">Hoàng Mai</option>
+                                    <option value="Đống Đa">Đống Đa</option>
+                                    <option value="Thanh Trì">Thanh Trì</option>
+                                    <option value="Cầu Giấy">Cầu Giấy</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="info-shipping__content--item">
+                            <div class="info-shipping__content--item-title">Phường / Xã</div>
+                            <div class="info-shipping__content--item-select">
+                                <select name="Phường / Xã" id="Phường / Xã">
+                                    <option value="Hoàng Liệt">Hoàng Liệt</option>
+                                    <option value="Đại Kim">Đại Kim</option>
+                                    <option value="Lĩnh Nam">Lĩnh Nam</option>
+                                    <option value="Hoàng Văn Thụ">Hoàng Văn Thụ</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="info-shipping__content--item">
+                            <div class="info-shipping__content--item-title">Nhập địa chỉ</div>
+                            <input type="text" value="Ngõ 15, Đường Ngọc Hồi"/>
+                        </div>
                     </div>
                 </div>
                 <div class="payment-methods">
@@ -209,6 +265,10 @@
                             <div class="payment-methods__content-item-title">Thanh toán bằng mã QR</div>
                         </div>
                     </div>
+                </div>
+                <div class="pay-footer-mobile">
+                    <button class="pay-product-header-body__button-mobile">Thanh toán</button>
+                    <a href="">Quay lại giỏ hảng</a>
                 </div>
             </div>
             <!-- CHÍNH SÁCH -->
