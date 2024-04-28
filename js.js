@@ -10,7 +10,20 @@ window.addEventListener("scroll",function(){
     }
 })
 
+const headerMenu = document.querySelector('.header__menu')
+const overlay = document.querySelector('.overlay')
+const headerMobileMenubar = document.querySelector('.header__mobile--menubar')
+const showMenu = () => {
+    overlay.classList.toggle('show')
+    headerMenu.classList.toggle('show')
+    headerMobileMenubar.classList.toggle('show')
+}
 
+const hideOverlay = () => {
+    overlay.classList.remove('show')
+    headerMenu.classList.remove('show')
+    headerMobileMenubar.classList.remove('show')
+}
 
 // -------------------------------------------Slider
 const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
