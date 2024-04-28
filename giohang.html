@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Sản phẩm</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header__desktop">
+            <div class="logo">
+                <img src="Images/logo.png">
+            </div>
+            <div class="menu">
+                <li><a href="#" id="active-menu">TRANG CHỦ</a></li>
+                <li><a href="sanpham.html">SẢN PHẨM</a>
+                    <ul class="sub-menu">
+                        <li><a href="sanpham_ao.html">Áo</a>
+                            <ul>
+                                <li>Áo Polo</li>
+                                <li>Áo Hoodie</li>
+                            </ul>
+                        </li>
+                        <li><a href="sanpham_quan.html">Quần</a>
+                            <ul>
+                                <li>Quần Short</li>
+                                <li>Quần dài</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+            </div>
+            <div class="others">
+                <li class="search">
+                    <input type="text" placeholder="   Tìm kiếm">
+                    <i class="fas fa-search"></i>
+                </li>
+                <li class="icon"><a href="dangnhap.html"><i class="fas fa-user"></i></a></li>
+                <li class="icon"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="header__mobile--menubar">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="header__mobile--logo">
+                <img src="Images/logo.png">
+            </div>
+            <div class="header__mobile--function">
+                <div class="function__search">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="function__cart">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-gray">
+        <div class="container">
+            <!-- ĐƯỜNG DẪN -->
+            <div class="breadcrumb">
+                <a href="#" class="breadcrumb__sub-page">trang chủ </a>
+                <a href="#" class="breadcrumb-page">giỏ hàng</a>
+            </div>
+            <!-- NỘI DUNG -->
+            <div class="cart">
+                <div class="cart-title">Giỏ hàng của bạn</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="cart-header-product-info">
+                                Thông tin sản phẩm
+                            </td>
+                            <td class="cart-header-price">
+                                Đơn giá
+                            </td>
+                            <td class="cart-header-qty">
+                                Số lượng
+                            </td>
+                            <td class="cart-header-total">
+                                Thành tiền
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cart-info-product">
+                                <img class="cart-info-product__image" src="./Images/ao10.png"/>
+                                <div class="cart-info-product__content">
+                                    <div class="cart-info-product__content-name">
+                                        Áo Polo Washed Teelab Local Brand Unisex Logo AP025
+                                    </div>
+                                    <div class="cart-info-product__content-size">
+                                        Wash/L
+                                    </div>
+                                    <div class="cart-info-product__content-action">
+                                        Xóa
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart-price">
+                                200.000đ
+                            </td>
+                            <td class="cart-qty">
+                                <div class="cart-qty-wrapper">
+                                    <button onclick="decreaseValue()" class="minus">
+                                        -
+                                    </button>
+                                    <input type="number" value="1" min="1" max="100">
+                                    <button onclick="increaseValue()" class="plus">
+                                        +
+                                    </button>
+                                </div>
+                            </td>
+                            <td class="cart-total-price">
+                                200.000đ
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cart-info-product">
+                                <img class="cart-info-product__image" src="./Images/ao4.webp"/>
+                                <div class="cart-info-product__content">
+                                    <div class="cart-info-product__content-name">
+                                        Áo Thun Local Brand Unisex Goose On Animal Planet TS 299
+                                    </div>
+                                    <div class="cart-info-product__content-size">
+                                        Đen/L
+                                    </div>
+                                    <div class="cart-info-product__content-action">
+                                        Xóa
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="cart-price">
+                                185.000đ
+                            </td>
+                            <td class="cart-qty">
+                                <div class="cart-qty-wrapper">
+                                    <button onclick="decreaseValue()" class="minus">
+                                        -
+                                    </button>
+                                    <input type="number" value="1" min="1" max="100">
+                                    <button onclick="increaseValue()" class="plus">
+                                        +
+                                    </button>
+                                </div>
+                            </td>
+                            <td class="cart-total-price">
+                                200.000đ
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="cart-footer">
+                    <div class="cart-footer__total-price">
+                        <div class="cart-footer__total-price--title">
+                            Tổng tiền:
+                        </div>
+                        <div class="cart-footer__total-price--price">
+                            385.000đ
+                        </div>
+                    </div>
+                    <button class="cart-footer__button">Thanh toán</button>
+                </div>
+            </div>
+            <!-- CHÍNH SÁCH -->
+            <div class="policy">
+                <div class="policy-item">
+                    <div class="policy-item__image">
+                        <img src="./Images/i-money-hand.png"/>
+                    </div>
+                    <div class="policy-item__content">
+                        <div class="policy-item__content--title">
+                            Thanh toán khi nhận hàng(COD)
+                        </div>
+                        <div class="policy-item__content--subtitle">
+                            Giao hàng toàn quốc
+                        </div>
+                    </div>
+                </div>
+                <div class="policy-item">
+                    <div class="policy-item__image">
+                        <img src="./Images/i-shipping-fast.png"/>
+                    </div>
+                    <div class="policy-item__content">
+                        <div class="policy-item__content--title">
+                            Miễn phí giao hàng
+                        </div>
+                        <div class="policy-item__content--subtitle">
+                            Đơn hàng trên 599.000đ
+                        </div>
+                    </div>
+                </div>
+                <div class="policy-item">
+                    <div class="policy-item__image">
+                        <img src="./Images/i-shippingbox.png"/>
+                    </div>
+                    <div class="policy-item__content">
+                        <div class="policy-item__content--title">
+                            Đổi trả miễn phí
+                        </div>
+                        <div class="policy-item__content--subtitle">
+                            3 ngày từ ngày nhận hàng
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="col1">
+            <img src="Images/logo.png" alt="">
+            <div>
+                <i class="fa fa-map"></i>
+                <p>15 Đường Y, Ngõ 86 Thị trấn Trâu quỳ,
+                    Gia Lâm, Hà Nội</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>090.327.1000</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>quyet.dino@gmail.com</p>
+            </div>
+            <img src="Images/logo_bct.webp">
+        </div>
+
+        <div class="col23">
+            <li>ABOUT US
+                <ul class="info">
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Sản phẩm</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Kiểm tra đơn hàng</a></li>
+                    <li><a href="">Giới thiệu</a></li>
+                </ul>
+            </li>
+
+            <li>CHÍNH SÁCH
+                <ul class="info">
+                    <li><a href="">Chính sách mua hàng</a></li>
+                    <li><a href="">Chính sách bảo mật<a></li>
+                    <li><a href="">Phương thức thanh toán</a></li>
+                    <li><a href="">Chính sách vận chuyển</a></li>
+                    <li><a href="">Chính sách đổi trả</a></li>
+                </ul>
+            </li>
+        </div>
+        <div class="col4">
+            <img src="Images/map.png">
+        </div>
+    </footer>
+    <script>
+        function increaseValue() {
+            var value = parseInt(document.querySelector('input[type=number]').value, 10);
+            value = isNaN(value) ? 1 : value;
+            value++;
+            document.querySelector('input[type=number]').value = value;
+        }
+
+        function decreaseValue() {
+            var value = parseInt(document.querySelector('input[type=number]').value, 10);
+            value = isNaN(value) ? 1 : value;
+            value--;
+            document.querySelector('input[type=number]').value = value < 1 ? 1 : value;
+        }
+    </script>
+</body>
+</html>
