@@ -14,6 +14,10 @@ this case, the code is importing styles from the following files: */
     font-family: 'Nunito Sans', sans-serif;
 }
 
+::placeholder {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 li {
     list-style: none;
 }
@@ -53,17 +57,32 @@ a {
 .header__mobile {
     display: none;
     @media (max-width: 475px) {
+        width: 100%;
         height: 74px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
         background: #111111;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
         .header__mobile--menubar {
-            width: 71px;
+            width: 36px;
+            height: 24px;
             i {
-                color: white;
                 font-size: 30px;
+                color: white;
+                display: none;
+            }
+            &.show {
+                i {
+                    display: block;
+                }
+                img {
+                    display: none;
+                }
             }
         }
         .header__mobile--logo {
@@ -78,11 +97,94 @@ a {
             display: flex;
             gap: 20px;
             align-items: center;
-            i {
-                color: white;
-                font-size: 24px;
+            .function__cart {
+                height: 32px;
+            }
+            img {
+                height: 100%;
             }
         }
+    }
+}
+.header__menu {
+    position: absolute;
+    top: -100%;
+    left:0;
+    background-color: white;
+    width: 100%;
+    z-index: 98;
+    padding: 40px 16px;
+    transition: all 0.3s ease;
+    &.show {
+        top: 74px;
+    }
+    .header__menu--search {
+        height: 40px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        input {
+            width: 100%;
+            height: 100%;
+            padding-left: 20px;
+            border-radius: 5px;
+            border: 1px solid #111111;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 27px;
+        }
+    }
+    .header__menu--list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        li {
+            a {
+                color: #000;
+                font-size: 16px;
+                font-weight: 600;
+                &.login {
+                    color: #4E73D2;
+                }
+            }
+        }
+        .list__item {
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            padding-left: 26px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+                width: 6px;
+                height: 6px;
+                background-color: #000;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.overlay {
+    width: 100%;
+    height: 100vh;
+    z-index: 97;
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    &.show {
+        opacity: 1;
+        visibility: visible;
     }
 }
 
@@ -182,10 +284,18 @@ a {
     }
 }
 
+input {
+    outline: none;
+}
+
 /* Slider */
 #Slider {
     margin-top: 80px;
     overflow: hidden;
+    position: relative;
+    @media (max-width: 474px) {
+        margin-top: 74px;
+    }
 }
 
 .aspect-ratio-169 {
@@ -205,7 +315,7 @@ a {
 
 .dot-container {
     position: absolute;
-    height: 30px;
+    bottom: 5%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -219,6 +329,10 @@ a {
     border-radius: 50%;
     margin-right: 10px;
     cursor: pointer;
+    @media (max-width: 474px) {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 .dot.active {
@@ -227,73 +341,115 @@ a {
 
 /* FOOTER */
 footer {
-    display: flex;
-    padding: 50px 30px;
-    height: 280px;
-    align-items: center;
     background-color: black;
-    justify-content: space-around;
+    padding: 30px 0;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 475px) {
+        gap: 42px;
+    }
 }
 
 .col1 {
-    flex: 1;
     color: white;
     padding: 10px 0px;
     margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    @media (max-width: 475px) {
+        gap: 10px;
+    }
+    @media (max-width: 475px) {
+        margin-left: 0;
+        padding: 0;
+    }
 
     img {
         height: 50px;
+        @media (max-width: 475px) {
+            height: 46px;
+        }
     }
 
-    div {
+    .col-flex {
         display: flex;
-        line-height: 30px;
-        padding: 5px 0px;
+        gap: 6px;
+        align-items: center;
 
-        i {
-            padding-top: 8px;
+        img {
+            width: 24px;
+            height: 24px;
+            @media (max-width: 475px) {
+                display: none;
+            }
         }
 
         p {
-            font-size: 12px;
-            padding-left: 10px;
+            font-size: 14px;
+            @media (max-width: 475px) {
+                font-size: 10px;
+                padding-left: 0;
+            }
         }
     }
 }
 
 .col23 {
-    flex: 2;
     color: white;
     display: flex;
-    justify-content: space-around;
-
-    li {
-        padding: 0px 10px;
-        font-weight: bold;
-        font-size: 15px;
+    justify-content: space-between;
+    width: 450px;
+    @media (max-width: 475px) {
+        flex: 1;
+    }
+    ul {
+        @media (max-width: 475px) {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+    .footer__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #F6F6F6;
+        margin-bottom: 12px;
+        @media (max-width: 475px) {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
     }
 
     ul li {
-        line-height: 35px;
+        margin-bottom: 12px;
+        @media (max-width: 475px) {
+            margin-bottom: 4px;
+        }
     }
 
     a {
         text-decoration: none;
         color: white;
-        font-size: 15px;
-        font-weight: 500;
+        font-size: 18px;
+        @media (max-width: 475px) {
+            font-size: 10px;
+        }
     }
 }
 
 .col4 {
-    flex: 1;
     text-align: center;
 
+    @media (max-width: 475px) {
+        display: none;
+    }
     img {
         width: 280px;
-        @media (max-width: 475px) {
-            display: none;
-        }
     }
 }
 
@@ -321,7 +477,7 @@ footer {
             }
         }
         .product-left__category {
-            padding-bottom: 23px;
+            padding-bottom: 50px;
             border-bottom: 1px solid #C6C6C6;
             .product-left__category-body {
                 margin-top: 16px;
@@ -495,13 +651,10 @@ footer {
     }
 }
 .product-propose {
-    padding: 0 75px;
-    padding-top: 50px;
-    padding-bottom: 23px;
+    padding: 50px 75px;
     @media (max-width: 430px) {
         padding: 0;
         padding-top: 10px;
-
     }
     .product-propose__title {
         font-size: 24px;
@@ -514,6 +667,21 @@ footer {
         .product-propose__title--button {
             text-decoration: underline;
             color: black;
+            @media (max-width: 430px) {
+                display: none;
+            }
+        }
+    }
+    .product-propose__button {
+        display: none;
+        @media (max-width: 430px) {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: underline;
+            color: black;
+            margin-top: 30px;
+            text-align: center;
         }
     }
     .product-propose__content {
@@ -1017,12 +1185,19 @@ footer {
     padding-top: 50px;
     padding-bottom: 88px;
     background-color: #E9E9E9;
+    margin-top: 25px;
+    @media (max-width: 474px) {
+        padding: 15px 0;
+    }
     .blog-home {
         .blog-home__title {
             font-size: 24px;
             font-weight: 700;
             display: flex;
             justify-content: space-between;
+            @media (max-width: 474px) {
+                font-size: 12px;
+            }
             .blog-home__title--button {
                 text-decoration: underline;
                 color: black;
@@ -1032,27 +1207,50 @@ footer {
             margin-top: 44px;
             display: flex;
             gap: 30px;
+            @media (max-width: 474px) {
+                gap: 20px;
+                margin-top: 8px;
+            }
             .blog-item {
-                width: calc((100% / 4) - 15px);
+                width: calc((100% - 90px) / 4);
+                @media (max-width: 474px) {
+                    width: calc((100% - 20px) / 2);
+                    &:nth-child(3), &:nth-child(4) {
+                        display: none;
+                    }
+                }
                 > img {
                     width: 100%;
                     height: 200px;
                     object-fit: cover;
+                    display: block;
+                    @media (max-width: 474px) {
+                        height: 124px;
+                    }
                 }
                 > h1 {
                     margin-top: 10px;
                     font-size: 18px;
                     font-weight: 700;
+                    @media (max-width: 474px) {
+                        font-size: 12px;
+                    }
                 }
                 .blog-info {
                     font-size: 16px;
                     margin-top: 18px;
+                    @media (max-width: 474px) {
+                        display: none;
+                    }
                 }
                 .date-container {
                     margin-top: 20px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    @media (max-width: 474px) {
+                        display: none;
+                    }
                     .date-container__date {
                         display: flex;
                         align-items: center;
@@ -1077,7 +1275,7 @@ footer {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0 15px;
     width: 100%;
@@ -1092,7 +1290,7 @@ footer {
     align-items: center;
     gap: 25px;
     @media (max-width: 430px) {
-        margin-top: 30px;
+        margin-top: 20px;
         gap: 10px;
     }
     .title {
@@ -1111,6 +1309,12 @@ footer {
             @media (max-width: 430px) {
                 width: 230px;
                 height: 30px;
+            }
+        }
+        ::placeholder {
+            color: #BDBDBD;
+            @media (max-width: 430px) {
+                font-size: 10px;
             }
         }
         > button {
