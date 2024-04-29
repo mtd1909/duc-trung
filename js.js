@@ -25,6 +25,11 @@ const hideOverlay = () => {
     headerMobileMenubar.classList.remove('show')
 }
 
+const showSuccessSignUp = () => {
+    const popupLogin = document.querySelector('.popup__login')
+    popupLogin.classList.add('show')
+}
+
 // -------------------------------------------Slider
 const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
 const imgContainer = document.querySelector(".aspect-ratio-169")
