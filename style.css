@@ -1229,7 +1229,7 @@ footer {
     gap: 10px;
   }
 }
-.chitiet-container .details-container .btn-container > button {
+.chitiet-container .details-container .btn-container > a {
   width: 200px;
   height: 48px;
   font-size: 18px;
@@ -1242,7 +1242,7 @@ footer {
   border-radius: 5px;
 }
 @media (max-width: 430px) {
-  .chitiet-container .details-container .btn-container > button {
+  .chitiet-container .details-container .btn-container > a {
     width: 100%;
     height: 36px;
     font-size: 16px;
@@ -1911,6 +1911,9 @@ footer {
   border: none;
   font-size: 20px;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 430px) {
   .cart .cart-footer .cart-footer__button {

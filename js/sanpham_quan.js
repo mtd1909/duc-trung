@@ -49,7 +49,8 @@ let products = {
 }
 
 for (let items of products.data){
-    let card = document.createElement("div")
+    let card = document.createElement("a")
+    card.setAttribute("href", "./chitietsanpham.html");
     card.classList.add("cartegory-right-content-item")
 
     let image = document.createElement("img")
