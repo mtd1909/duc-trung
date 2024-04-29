@@ -1990,13 +1990,29 @@ footer {
   border-radius: 10px;
   display: none;
 }
+@media (max-width: 430px) {
+  .main-pay .popup-success-pay__main {
+    width: 370px;
+    padding: 20px 50px;
+  }
+}
 .main-pay .popup-success-pay__main .popup-success-pay__main--title {
   font-size: 24px;
   font-weight: 700;
 }
+@media (max-width: 430px) {
+  .main-pay .popup-success-pay__main .popup-success-pay__main--title {
+    font-size: 18px;
+  }
+}
 .main-pay .popup-success-pay__main .popup-success-pay__main--subtitle {
   text-align: center;
   font-size: 22px;
+}
+@media (max-width: 430px) {
+  .main-pay .popup-success-pay__main .popup-success-pay__main--subtitle {
+    font-size: 14px;
+  }
 }
 .main-pay .popup-success-pay__main .popup-success-pay__main--button {
   cursor: pointer;
@@ -2009,6 +2025,11 @@ footer {
   justify-content: center;
   height: 40px;
   border-radius: 5px;
+}
+@media (max-width: 430px) {
+  .main-pay .popup-success-pay__main .popup-success-pay__main--button {
+    font-size: 14px;
+  }
 }
 .main-pay .popup-success-pay {
   position: absolute;
