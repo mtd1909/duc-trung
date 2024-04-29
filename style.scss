@@ -680,10 +680,6 @@ footer {
                         background-color: #111111;
                         color: white;
                     }
-                    &:nth-child(4) {
-                        border: 1px solid #D0D0D0;
-                        color: #D0D0D0;
-                    }
                 }
             }
         }
@@ -1045,6 +1041,10 @@ footer {
                         color: white;
                         border: 1px solid #111111;
                         background-color: #111111;
+                    }
+                    &:nth-child(4) {
+                        border: 1px solid #D0D0D0;
+                        color: #D0D0D0;
                     }
                 }
             }
