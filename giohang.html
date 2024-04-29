@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Sản phẩm</title>
 </head>
+
 <body>
     <!-- HEADER -->
     <div class="overlay" onclick="hideOverlay()"></div>
@@ -111,7 +115,7 @@
                     <tbody>
                         <tr>
                             <td class="cart-info-product">
-                                <img class="cart-info-product__image" src="./Images/ao10.png"/>
+                                <img class="cart-info-product__image" src="./Images/ao10.png" />
                                 <div class="cart-info-product__content">
                                     <div class="cart-info-product__content-name">
                                         Áo Polo Washed Teelab Local Brand Unisex Logo AP025
@@ -145,7 +149,7 @@
                     </tbody>
                 </table>
                 <div class="cart-product-mobile">
-                    <img class="cart-info-product-mobile__image" src="./Images/ao10.png"/>
+                    <img class="cart-info-product-mobile__image" src="./Images/ao10.png" />
                     <div class="cart-info-product-mobile__content">
                         <div class="cart-info-product-mobile__content--title">
                             Áo Polo Washed Teelab Local Brand Unisex Logo AP025
@@ -184,7 +188,7 @@
             <div class="policy">
                 <div class="policy-item">
                     <div class="policy-item__image">
-                        <img src="./Images/i-money-hand.png"/>
+                        <img src="./Images/i-money-hand.png" />
                     </div>
                     <div class="policy-item__content">
                         <div class="policy-item__content--title">
@@ -197,7 +201,7 @@
                 </div>
                 <div class="policy-item">
                     <div class="policy-item__image">
-                        <img src="./Images/i-shipping-fast.png"/>
+                        <img src="./Images/i-shipping-fast.png" />
                     </div>
                     <div class="policy-item__content">
                         <div class="policy-item__content--title">
@@ -210,7 +214,7 @@
                 </div>
                 <div class="policy-item">
                     <div class="policy-item__image">
-                        <img src="./Images/i-shippingbox.png"/>
+                        <img src="./Images/i-shippingbox.png" />
                     </div>
                     <div class="policy-item__content">
                         <div class="policy-item__content--title">
@@ -285,6 +289,45 @@
             value--;
             document.querySelector('input[type=number]').value = value < 1 ? 1 : value;
         }
+        const headerMenu = document.querySelector('.header__menu')
+        const overlay = document.querySelector('.overlay')
+        const headerMobileMenubar = document.querySelector('.header__mobile--menubar')
+        const showMenu = () => {
+            overlay.classList.toggle('show')
+            headerMenu.classList.toggle('show')
+            headerMobileMenubar.classList.toggle('show')
+        }
+
+        const hideOverlay = () => {
+            overlay.classList.remove('show')
+            headerMenu.classList.remove('show')
+            headerMobileMenubar.classList.remove('show')
+        }
+
+        const showSize = () => {
+            const popupSize = document.querySelector('.popup__size')
+            popupSize.classList.add('show')
+        }
+
+        document.getElementById("container_size")?.addEventListener("click", function (event) {
+            const popupSize = document.querySelector('.popup__size')
+            if (event.target.id === "image_size") {
+                event.stopPropagation();
+            } else {
+                popupSize.classList.remove('show')
+            }
+        });
+
+        function checkEnter(event) {
+            if (event.key === "Enter") {
+                window.location.href = 'timkiem.html'
+            }
+        }
+
+        function search() {
+            window.location.href = 'timkiem.html'
+        }
     </script>
 </body>
+
 </html>
