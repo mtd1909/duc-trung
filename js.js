@@ -175,7 +175,7 @@ for (let items of products.data){
     btn.innerHTML = "Thêm vào giỏ hàng"
     card.appendChild(btn)
 
-    document.getElementById("product1").appendChild(card);
+    document.getElementById("product1")?.appendChild(card);
     // console.log('da hien '+String(items))
 }
 
@@ -252,7 +252,7 @@ for (let items of products2.data){
     btn.innerHTML = "Thêm vào giỏ hàng"
     card.appendChild(btn)
 
-    document.getElementById("product2").appendChild(card);
+    document.getElementById("product2")?.appendChild(card);
     // console.log('da hien '+String(items))
 }
 
@@ -329,7 +329,7 @@ for (let items of products3.data){
     btn.innerHTML = "Thêm vào giỏ hàng"
     card.appendChild(btn)
 
-    document.getElementById("product3").appendChild(card);
+    document.getElementById("product3")?.appendChild(card);
     // console.log('da hien '+String(items))
 }
 

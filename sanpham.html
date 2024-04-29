@@ -10,6 +10,10 @@
 </head>
 <body>
     <!-- HEADER -->
+    <div class="overlay" onclick="hideOverlay()"></div>
+    <div class="popup__size" id="container_size">
+        <img src="./Images/size.png" id="image_size" alt="img">
+    </div>
     <header>
         <div class="header__desktop">
             <div class="container">
@@ -18,8 +22,8 @@
                         <img src="Images/logo.png">
                     </div>
                     <div class="menu">
-                        <li><a href="index.html" id="active-menu">TRANG CHỦ</a></li>
-                        <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                        <li><a href="index.html">TRANG CHỦ</a></li>
+                        <li><a href="sanpham.html" id="active-menu">SẢN PHẨM</a></li>
                         <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
                         <li><a href="blog.html">BLOG</a></li>
                     </div>
@@ -28,8 +32,15 @@
                             <input type="text" placeholder="Tìm kiếm">
                             <img src="./Images/icon_search.svg" alt="img">
                         </li>
-                        <li class="icon"><a href="dangnhap.html"><img src="./Images/icon-user.svg" alt="img"></a></li>
-                        <li class="icon"><a href=""><img src="./Images/icon_cart.svg" alt="img"></a></li>
+                        <li class="icon avatar">
+                            <img src="./Images/header-avatar.svg" alt="img">
+                            <div class="connect"></div>
+                            <a href="index.html" class="logout">
+                                <p class="">Đăng xuất</p>
+                                <img src="./Images/icon_logout.svg" alt="img">
+                            </a>
+                        </li>
+                        <li class="icon"><a href="giohang.html"><img src="./Images/icon_cart.svg" alt="img"></a></li>
                     </div>
                 </div>
             </div>
@@ -43,12 +54,16 @@
                 <img src="./Images/logo.png">
             </div>
             <div class="header__mobile--function">
-                <div class="function__cart">
+                <a href="giohang.html" class="function__cart">
                     <img src="./Images/icon_cart.svg" alt="img">
                 </div>
             </div>
         </div>
         <div class="header__menu">
+            <div class="header__avatar">
+                <img src="./Images/header-avatar.svg" alt="img">
+                <p class="">Đức Thọ</p>
+            </div>
             <div class="header__menu--search">
                 <img src="./Images/icon_search.svg" alt="img">
                 <input type="text" placeholder="Tìm kiếm">
@@ -60,8 +75,8 @@
                 <div class="list__item"><a href="sanpham_quan.html">Quần</a></div>
                 <li><a href="gioithieu.html">Giới thiệu</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><div onclick="showSize()">Bảng size</div></li>
-                <li><a href="dangnhap.html" class="login__active">Đăng nhập</a></li>
+                <li><a href="sanpham.html">Bảng size</a></li>
+                <li><a href="index.html" class="logout__active">Đăng xuất</a></li>
             </ul>
         </div>
     </header>
