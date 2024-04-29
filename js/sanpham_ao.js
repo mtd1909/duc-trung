@@ -137,14 +137,6 @@ let products = {
             price: 349000,
             image: "./Images/hd2.webp"
         },
-        {
-            id: 'hd1',
-            name: 'Áo Hoodie Local Brand Unisex Thêu Logo Basic HD074',
-            price1: '250.000đ',
-            price2: '400.000đ',
-            price: 250000,
-            image: "./Images/hd1.webp"
-        }
     ]
 }
 
@@ -153,24 +145,12 @@ for (let items of products.data){
     if(!items.soldOut) {
         card.setAttribute("href", "./chitietsanpham.html");
     }
-    if(items.soldOut) {
-        card.classList.add("sold-out-item")
-    }
-    container = document.createElement("div");
-    container.classList.add("cartegory-image");
+    card.classList.add("cartegory-right-content-item")
 
     let image = document.createElement("img")
     image.setAttribute("src", items.image)
-    container.appendChild(image)
+    card.appendChild(image)
 
-    if (items.soldOut) {
-        let soldOutDiv = document.createElement('div');
-        soldOutDiv.classList.add('sold-out');
-        soldOutDiv.innerHTML = items.soldOut
-        container.appendChild(soldOutDiv);
-    }
-
-    card.appendChild(container);
     let name = document.createElement("h1");
     name.innerHTML = items.name;
     card.appendChild(name)
