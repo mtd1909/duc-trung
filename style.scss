@@ -1797,77 +1797,80 @@ footer {
 }
 
 //thanh toán
-.main-pay {
-    @media (max-width:430px) {
-        padding-bottom: 40px !important;
-    }
-    .popup-success-pay__main {
-        padding: 20px 92px;
-        width: 575px;
-        background-color: white;
-        position: absolute;
+.popup-success-pay__main {
+    padding: 20px 92px;
+    width: 575px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    border-radius: 10px;
+    display: none;
+    @media (max-width: 430px) {
+        width: 370px;
+        padding: 20px 50px;
         top: 50%;
-        left: 50%;
-        z-index: 20;
-        transform: translate(-50%, -50%);
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        flex-direction: column;
-        gap: 28px;
-        align-items: center;
-        border-radius: 10px;
-        display: none;
+    }
+    .popup-success-pay__main--title {
+        font-size: 24px;
+        font-weight: 700;
         @media (max-width: 430px) {
-            width: 370px;
-            padding: 20px 50px;
-        }
-        .popup-success-pay__main--title {
-            font-size: 24px;
-            font-weight: 700;
-            @media (max-width: 430px) {
-                font-size: 18px;
-            }
-        }
-        .popup-success-pay__main--subtitle {
-            text-align: center;
-            font-size: 22px;
-            @media (max-width: 430px) {
-                font-size: 14px;
-            }
-        }
-        .popup-success-pay__main--button {
-            cursor: pointer;
-            font-size: 20px;
-            color: white;
-            background-color: #111111;
-            width: 212px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            border-radius: 5px;
-            @media (max-width: 430px) {
-                font-size: 14px;
-            }
+            font-size: 18px;
         }
     }
-    .popup-success-pay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0px;
-        background-color: #626262;
-        z-index: 5;
-        opacity: 20%;
-        display: none;
+    .popup-success-pay__main--subtitle {
+        text-align: center;
+        font-size: 22px;
+        @media (max-width: 430px) {
+            font-size: 14px;
+        }
+    }
+    .popup-success-pay__main--button {
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        background-color: #111111;
+        width: 212px;
+        display: flex;
         align-items: center;
         justify-content: center;
+        height: 40px;
+        border-radius: 5px;
+        @media (max-width: 430px) {
+            font-size: 14px;
+        }
     }
-    .popup-success-pay-active {
-        display: flex;
-    }
-    .popup-success-pay__main-active {
-        display: flex;
+}
+.popup-success-pay__main-active {
+    display: flex;
+}
+.popup-success-pay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    background-color: #626262;
+    z-index: 5;
+    opacity: 40%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.popup-success-pay-active {
+    display: flex;
+}
+
+.main-pay {
+    position: relative;
+    @media (max-width:430px) {
+        padding-bottom: 40px !important;
     }
 }
 .body-pay {
@@ -2307,7 +2310,6 @@ footer {
 //thanh toán thành công
 .success-pay {
     position: relative;
-    height: 100vh;
     overflow: hidden;
 }
 

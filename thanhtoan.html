@@ -12,7 +12,7 @@
     <title>Sản phẩm</title>
 </head>
 
-<body id="body-pay">
+<body id="main-pay-id">
     <!-- HEADER -->
     <div class="overlay" onclick="hideOverlay()"></div>
     <div class="popup__size" id="container_size">
@@ -87,7 +87,7 @@
         </div>
     </header>
 
-    <main class="main-gray main-gray-mobile main-pay" id="main-pay-id">
+    <main class="main-gray main-gray-mobile main-pay">
         <div class="container">
             <!-- ĐƯỜNG DẪN -->
             <div class="breadcrumb">
@@ -338,15 +338,15 @@
                 </div>
             </div>
         </div>
-        <div class="popup-success-pay" id="popup-success-pay-id"></div>
-        <div class="popup-success-pay__main" id="popup-success-pay-main-id">
-            <div class="popup-success-pay__main--title">Đặt hàng thành công!</div>
-            <div class="popup-success-pay__main--subtitle">Nhân viên sẽ liên hệ với bạn trong vòng 24h để xác nhận đơn
-                hàng</div>
-            <a href="./index.html" class="popup-success-pay__main--button">Quay lại trang chủ</a>
-        </div>
     </main>
-
+    <div class="popup-success-pay" id="popup-success-pay-id">
+    </div>
+    <div class="popup-success-pay__main" id="popup-success-pay-main-id">
+        <div class="popup-success-pay__main--title">Đặt hàng thành công!</div>
+        <div class="popup-success-pay__main--subtitle">Nhân viên sẽ liên hệ với bạn trong vòng 24h để xác nhận đơn
+            hàng</div>
+        <a href="./index.html" class="popup-success-pay__main--button">Quay lại trang chủ</a>
+    </div>
     <!-- FOOTER -->
     <footer>
         <div class="container">
@@ -421,7 +421,6 @@
         const divPopupPaySuccessMain = document.getElementById('popup-success-pay-main')
 
         const idPaySuccess = {
-            'body-pay': 'body-pay',
             'main-pay-id': 'success-pay',
             'popup-success-pay-id': 'popup-success-pay-active',
             'popup-success-pay-main-id': 'popup-success-pay__main-active'

@@ -1975,16 +1975,11 @@ footer {
   color: #BAB7B7;
 }
 
-@media (max-width: 430px) {
-  .main-pay {
-    padding-bottom: 40px !important;
-  }
-}
-.main-pay .popup-success-pay__main {
+.popup-success-pay__main {
   padding: 20px 92px;
   width: 575px;
   background-color: white;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   z-index: 20;
@@ -1997,30 +1992,31 @@ footer {
   display: none;
 }
 @media (max-width: 430px) {
-  .main-pay .popup-success-pay__main {
+  .popup-success-pay__main {
     width: 370px;
     padding: 20px 50px;
+    top: 50%;
   }
 }
-.main-pay .popup-success-pay__main .popup-success-pay__main--title {
+.popup-success-pay__main .popup-success-pay__main--title {
   font-size: 24px;
   font-weight: 700;
 }
 @media (max-width: 430px) {
-  .main-pay .popup-success-pay__main .popup-success-pay__main--title {
+  .popup-success-pay__main .popup-success-pay__main--title {
     font-size: 18px;
   }
 }
-.main-pay .popup-success-pay__main .popup-success-pay__main--subtitle {
+.popup-success-pay__main .popup-success-pay__main--subtitle {
   text-align: center;
   font-size: 22px;
 }
 @media (max-width: 430px) {
-  .main-pay .popup-success-pay__main .popup-success-pay__main--subtitle {
+  .popup-success-pay__main .popup-success-pay__main--subtitle {
     font-size: 14px;
   }
 }
-.main-pay .popup-success-pay__main .popup-success-pay__main--button {
+.popup-success-pay__main .popup-success-pay__main--button {
   cursor: pointer;
   font-size: 20px;
   color: white;
@@ -2033,11 +2029,16 @@ footer {
   border-radius: 5px;
 }
 @media (max-width: 430px) {
-  .main-pay .popup-success-pay__main .popup-success-pay__main--button {
+  .popup-success-pay__main .popup-success-pay__main--button {
     font-size: 14px;
   }
 }
-.main-pay .popup-success-pay {
+
+.popup-success-pay__main-active {
+  display: flex;
+}
+
+.popup-success-pay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2045,16 +2046,23 @@ footer {
   left: 0px;
   background-color: #626262;
   z-index: 5;
-  opacity: 20%;
+  opacity: 40%;
   display: none;
   align-items: center;
   justify-content: center;
 }
-.main-pay .popup-success-pay-active {
+
+.popup-success-pay-active {
   display: flex;
 }
-.main-pay .popup-success-pay__main-active {
-  display: flex;
+
+.main-pay {
+  position: relative;
+}
+@media (max-width: 430px) {
+  .main-pay {
+    padding-bottom: 40px !important;
+  }
 }
 
 .body-pay {
@@ -2544,7 +2552,6 @@ footer {
 
 .success-pay {
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
 
