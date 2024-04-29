@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Sản phẩm - Áo</title>
 </head>
+
 <body>
     <!-- HEADER -->
     <div class="overlay" onclick="hideOverlay()"></div>
@@ -98,8 +102,9 @@
                             <i class="fa-solid fa-chevron-up"></i>
                         </div>
                         <div class="product-left__category-body">
-                            <a class="product-left__category-body--item" href="">Quần</a>
-                            <a class="product-left__category-body--item product-left__category-body--item-active" href="">Áo</a>
+                            <a class="product-left__category-body--item" href="sanpham_quan.html">Quần</a>
+                            <a class="product-left__category-body--item product-left__category-body--item-active"
+                                href="sanpham_ao.html">Áo</a>
                         </div>
                     </div>
                     <div class="product-left__price-approx">
@@ -109,13 +114,13 @@
                         </div>
                         <div class="product-left__price-approx-body">
                             <div class="product-left__price-approx-body--input">
-                                <input type="text" placeholder="giá tối thiểu" id="min-price"/>
+                                <input type="text" placeholder="giá tối thiểu" id="min-price" />
                                 <div class="product-price-approx-line"></div>
-                                <input type="text" placeholder="giá tối đa" id="max-price"/>
+                                <input type="text" placeholder="giá tối đa" id="max-price" />
                             </div>
                             <div class="product-left__price-approx-body--button">
                                 <button id="delete-price">Xóa lọc</bu>
-                                <button id="apply-price">Áp dụng</button>
+                                    <button id="apply-price">Áp dụng</button>
                             </div>
                         </div>
                     </div>
@@ -125,14 +130,15 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                     </div>
-                    <div  class="product-left__size">
+                    <div class="product-left__size">
                         <div class="product-left__header">
                             <a href="" class="product-left__header--title">Kích cỡ</a>
                             <i class="fa-solid fa-chevron-up"></i>
                         </div>
                         <div class="product-left__size-body">
                             <div class="product-left__size-body--item" id="size-S">S</div>
-                            <div class="product-left__size-body--item product-left__size-body--item-active" id="size-M">M</div>
+                            <div class="product-left__size-body--item product-left__size-body--item-active" id="size-M">
+                                M</div>
                             <div class="product-left__size-body--item" id="size-L">L</div>
                             <div class="product-left__size-body--item" id="size-XL">XL</div>
                         </div>
@@ -146,7 +152,7 @@
                         <p class="product-right-top-item-mobile">Các sản phẩm áo</p>
                     </div>
 
-                    <div class="product-right-content" id="products">                            
+                    <div class="product-right-content" id="products">
                     </div>
                     <div class="product-pagination pagination">
                         <div class="pagination-item pagination-item-active">
@@ -176,7 +182,7 @@
                     <a href="sanpham.html" class="product-propose__title--button">Xem thêm</a>
                 </div>
                 <div class="product-propose__content" id="product3"></div>
-    
+
                 <div class="email-discount">
                     <div class="title">Đăng ký nhận tin khuyến mãi</div>
                     <div class="input-discount">
@@ -235,6 +241,7 @@
         </div>
     </footer>
 
-    <script src="js/sanpham_ao.js"></script>
+    <script src="js/sanpham.js"></script>
 </body>
+
 </html>
