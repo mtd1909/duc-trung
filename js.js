@@ -25,6 +25,25 @@ const hideOverlay = () => {
     headerMobileMenubar.classList.remove('show')
 }
 
+const showSuccessSignUp = () => {
+    const popupLogin = document.querySelector('.popup__login')
+    popupLogin.classList.add('show')
+}
+
+const showSize = () => {
+    const popupSize = document.querySelector('.popup__size')
+    popupSize.classList.add('show')
+}
+
+document.getElementById("container_size")?.addEventListener("click", function(event) {
+    const popupSize = document.querySelector('.popup__size')
+    if (event.target.id === "image_size") {
+        event.stopPropagation();
+    } else {
+        popupSize.classList.remove('show')
+    }
+});
+
 // -------------------------------------------Slider
 const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
 const imgContainer = document.querySelector(".aspect-ratio-169")
@@ -368,6 +387,6 @@ for (let items of post.data){
     blog_date.appendChild(more)
     card.appendChild(blog_date)
 
-    document.getElementById("blog-post").appendChild(card);
+    document.getElementById("blog-post")?.appendChild(card);
 
 }
