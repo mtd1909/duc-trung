@@ -60,6 +60,15 @@ setInterval(imgSlide,5000)
 let products = {
     data: [
         {
+            id: 'ao11',
+            name: 'Áo Thun Local Brand Unisex Cat On Animal Planet TS230',
+            price1: '185.000đ',
+            price2: '350.000đ',
+            price: 185000,
+            image: "./Images/ao11.png",
+            soldOut: 'sold out'
+        },
+        {
             id: 'ao1',
             name: 'Áo Thun Local Brand Unisex Cat On Animal Planet TS230',
             price1: '185.000đ',
@@ -82,14 +91,6 @@ let products = {
             price2: '200.000đ',
             price: 125000,
             image: "./Images/ao3.jpeg"
-        },
-        {
-            id: 'ao4',
-            name: 'Áo Thun Local Brand Unisex Goose On Animal Planet TS 299',
-            price1: '190.000đ',
-            price2: '350.000đ',
-            price: 190000,
-            image: "./Images/ao4.webp"
         }
     ]
 }
@@ -97,11 +98,24 @@ let products = {
 for (let items of products.data){
     let card = document.createElement("div")
     card.classList.add("cartegory-right-content-item")
+    if(items.soldOut) {
+        card.classList.add("sold-out-item")
+    }
+    container = document.createElement("div");
+    container.classList.add("cartegory-image");
 
     let image = document.createElement("img")
     image.setAttribute("src", items.image)
-    card.appendChild(image)
+    container.appendChild(image)
 
+    if (items.soldOut) {
+        let soldOutDiv = document.createElement('div');
+        soldOutDiv.classList.add('sold-out');
+        soldOutDiv.innerHTML = items.soldOut
+        container.appendChild(soldOutDiv);
+    }
+
+    card.appendChild(container);
     let name = document.createElement("h1");
     name.innerHTML = items.name;
     card.appendChild(name)
@@ -118,7 +132,7 @@ for (let items of products.data){
 
     let price2 = document.createElement("div")
     price2.classList.add("price2")
-    price2.innerHTML = items.price1
+    price2.innerHTML = items.price2
     price_row.appendChild(price2)
 
     card.appendChild(price_row)

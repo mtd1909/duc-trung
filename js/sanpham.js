@@ -22,19 +22,28 @@ window.addEventListener("scroll",function(){
 let products = {
     data: [
         {
-            id: 'ao1',
+            id: 'ao11',
             name: 'Áo Thun Local Brand Unisex Cat On Animal Planet TS230',
             price1: '185.000đ',
-            price2: '300.000đ',
+            price2: '350.000đ',
             price: 185000,
-            image: "./Images/ao1.webp"
+            image: "./Images/ao11.png",
+            soldOut: 'sold out'
         },
         {
-            id: 'ao2',
+            id: 'detail-product-1',
             name: 'Áo Polo Washed Localbrand Unisex Logo AP025',
-            price1: '220.000đ',
+            price1: '200.000đ',
             price2: '350.000đ',
-            price: 220000,
+            price: 200000,
+            image: "./Images/detail-product-1.png"
+        },
+        {
+            id: 'ao4',
+            name: 'Áo Thun Local Brand Unisex Goose On Animal Planet TS 299',
+            price1: '185.000đ',
+            price2: '350.000đ',
+            price: 185000,
             image: "./Images/ao2.jpeg"
         },
         {
@@ -92,18 +101,47 @@ let products = {
             price2: '400.000đ',
             price: 250000,
             image: "./Images/hd1.webp"
-        }
+        },
+        {
+            id: 'detail-product-1',
+            name: 'Áo Polo Washed Localbrand Unisex Logo AP025',
+            price1: '200.000đ',
+            price2: '350.000đ',
+            price: 200000,
+            image: "./Images/detail-product-1.png"
+        },
+        {
+            id: 'ao6',
+            name: 'Áo Sơ Mi Symbol Basic Logo SS047',
+            price1: '195.000đ',
+            price2: '350.000đ',
+            price: 195000,
+            image: "./Images/ao6.webp"
+        },
     ]
 }
 
 for (let items of products.data){
     let card = document.createElement("div")
     card.classList.add("cartegory-right-content-item")
+    if(items.soldOut) {
+        card.classList.add("sold-out-item")
+    }
+    container = document.createElement("div");
+    container.classList.add("cartegory-image");
 
     let image = document.createElement("img")
     image.setAttribute("src", items.image)
-    card.appendChild(image)
+    container.appendChild(image)
 
+    if (items.soldOut) {
+        let soldOutDiv = document.createElement('div');
+        soldOutDiv.classList.add('sold-out');
+        soldOutDiv.innerHTML = items.soldOut
+        container.appendChild(soldOutDiv);
+    }
+
+    card.appendChild(container);
     let name = document.createElement("h1");
     name.innerHTML = items.name;
     card.appendChild(name)
@@ -130,6 +168,7 @@ for (let items of products.data){
     btn.setAttribute("onclick", "addToCart()")
     btn.innerHTML = "Thêm vào giỏ hàng"
     card.appendChild(btn)
+
 
     document.getElementById("products").appendChild(card);
     // console.log('da hien '+String(items))

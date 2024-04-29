@@ -22,6 +22,15 @@ window.addEventListener("scroll",function(){
 let products = {
     data: [
         {
+            id: 'ao11',
+            name: 'Áo Thun Local Brand Unisex Cat On Animal Planet TS230',
+            price1: '185.000đ',
+            price2: '350.000đ',
+            price: 185000,
+            image: "./Images/ao11.png",
+            soldOut: 'sold out'
+        },
+        {
             id: 'ao1',
             name: 'Áo Thun Local Brand Unisex Cat On Animal Planet TS230',
             price1: '185.000đ',
@@ -99,11 +108,24 @@ let products = {
 for (let items of products.data){
     let card = document.createElement("div")
     card.classList.add("cartegory-right-content-item")
+    if(items.soldOut) {
+        card.classList.add("sold-out-item")
+    }
+    container = document.createElement("div");
+    container.classList.add("cartegory-image");
 
     let image = document.createElement("img")
     image.setAttribute("src", items.image)
-    card.appendChild(image)
+    container.appendChild(image)
 
+    if (items.soldOut) {
+        let soldOutDiv = document.createElement('div');
+        soldOutDiv.classList.add('sold-out');
+        soldOutDiv.innerHTML = items.soldOut
+        container.appendChild(soldOutDiv);
+    }
+
+    card.appendChild(container);
     let name = document.createElement("h1");
     name.innerHTML = items.name;
     card.appendChild(name)
