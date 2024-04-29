@@ -63,7 +63,7 @@
         </div>
     </header>
 
-    <main class="main-gray main-gray-mobile main-pay">
+    <main class="main-gray main-gray-mobile main-pay" id="main-pay-id">
         <div class="container">
             <!-- ĐƯỜNG DẪN -->
             <div class="breadcrumb">
@@ -176,7 +176,7 @@
                             <div class="pay-product-header-body__total-price--title">Tổng tiền:</div>
                             <div class="pay-product-header-body__total-price--price">200.000đ</div>
                         </div>
-                        <button class="pay-product-header-body__button">Thanh toán</button>
+                        <button class="pay-product-header-body__button" id="button-pay">Thanh toán</button>
                     </div>
                 </div>
                 <div class="info-shipping-mobile">
@@ -314,6 +314,12 @@
                 </div>
             </div>
         </div>
+        <div class="popup-success-pay" id="popup-success-pay-id"></div>
+        <div class="popup-success-pay__main" id="popup-success-pay-main-id">
+            <div class="popup-success-pay__main--title">Đặt hàng thành công!</div>
+            <div class="popup-success-pay__main--subtitle">Nhân viên sẽ liên hệ với bạn trong vòng 24h để xác nhận đơn hàng</div>
+            <a href="./index.html" class="popup-success-pay__main--button">Quay lại trang chủ</a>
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -375,6 +381,31 @@
             value--;
             document.querySelector('input[type=number]').value = value < 1 ? 1 : value;
         }
+
+        const items = document.querySelectorAll('.payment-methods__content--item');
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                items.forEach(i => i.classList.remove('payment-methods__content--item-active'));
+                item.classList.add('payment-methods__content--item-active');
+            });
+        });
+        const divMainPaySuccess = document.getElementById('main-pay')
+        const divPopupPaySuccess = document.getElementById('popup-success-pay')
+        const divPopupPaySuccessMain = document.getElementById('popup-success-pay-main')
+
+        const idPaySuccess = {
+            'main-pay-id': 'success-pay',
+            'popup-success-pay-id': 'popup-success-pay-active',
+            'popup-success-pay-main-id': 'popup-success-pay__main-active'
+        }
+        const addButtonPay = document.getElementById('button-pay');
+        addButtonPay.addEventListener('click', () => {
+            for (const [id, className] of Object.entries(idPaySuccess)) {
+                const item = document.getElementById(id);
+                item.classList.add(className);
+            }
+        });
     </script>
 </body>
 </html>

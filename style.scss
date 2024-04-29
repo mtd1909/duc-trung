@@ -785,6 +785,34 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .cartegory-image {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        @media (max-width: 430px) {
+            height: 185px;
+        }
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .sold-out {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            background-color: #000;
+            padding: 6px 24px;
+            color: white;
+            text-transform: uppercase;
+            @media (max-width: 430px) {
+                font-size: 12px;
+                padding: 6px 14px;
+            }
+        }
+    }
     > img {
         width: 100%;
         height: 300px;
@@ -836,7 +864,7 @@ footer {
         font-weight: 700;
         color: white;
         border: none;
-        padding: 8px 30px;
+        padding: 11px 30px;
         background-color: #111111;
         margin: 0 auto;
         margin-top: 14px;
@@ -846,6 +874,11 @@ footer {
             font-size: 12px;
             padding: 8px 0;
             width: 100%;
+        }
+    }
+    &.sold-out-item {
+        > button {
+            background-color: #D9D9D9 !important;
         }
     }
 }
@@ -1756,6 +1789,61 @@ footer {
     @media (max-width:430px) {
         padding-bottom: 40px !important;
     }
+    .popup-success-pay__main {
+        padding: 20px 92px;
+        width: 575px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 20;
+        transform: translate(-50%, -50%);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        flex-direction: column;
+        gap: 28px;
+        align-items: center;
+        border-radius: 10px;
+        display: none;
+        .popup-success-pay__main--title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .popup-success-pay__main--subtitle {
+            text-align: center;
+            font-size: 22px;
+        }
+        .popup-success-pay__main--button {
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            background-color: #111111;
+            width: 212px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            border-radius: 5px;
+        }
+    }
+    .popup-success-pay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0px;
+        background-color: #626262;
+        z-index: 10;
+        opacity: 20%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    .popup-success-pay-active {
+        display: flex;
+    }
+    .popup-success-pay__main-active {
+        display: flex;
+    }
 }
 .pay {
     padding-top: 128px;
@@ -1856,7 +1944,11 @@ footer {
                     }
                 }
                 &:nth-child(3), &:nth-child(4), &:nth-child(5) {
-                    display: none;
+                    @media (max-width: 430px) {
+                        display: none;
+                    }
+                    
+
                 } 
 
             }
@@ -2183,55 +2275,7 @@ footer {
 .success-pay {
     position: relative;
     height: 100vh;
-    .popup-success-pay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0px;
-        background-color: #626262;
-        z-index: 10;
-        opacity: 20%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .popup-success-pay__main {
-        padding: 20px 92px;
-        width: 575px;
-        background-color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 20;
-        transform: translate(-50%, -50%);
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        display: flex;
-        flex-direction: column;
-        gap: 28px;
-        align-items: center;
-        border-radius: 10px;
-        .popup-success-pay__main--title {
-            font-size: 24px;
-            font-weight: 700;
-        }
-        .popup-success-pay__main--subtitle {
-            text-align: center;
-            font-size: 22px;
-        }
-        .popup-success-pay__main--button {
-            cursor: pointer;
-            font-size: 20px;
-            color: white;
-            background-color: #111111;
-            width: 212px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            border-radius: 5px;
-        }
-    }
+    overflow: hidden;
 }
 
 //chi tiết blog
