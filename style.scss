@@ -58,7 +58,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 999;
 
     &.sticky {
         background-color: rgba(0, 0, 0, 0.5);
@@ -91,7 +91,7 @@ a {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 99;
+        z-index: 999;
         .header__mobile--menubar {
             width: 36px;
             height: 24px;
@@ -1816,13 +1816,23 @@ footer {
         align-items: center;
         border-radius: 10px;
         display: none;
+        @media (max-width: 430px) {
+            width: 370px;
+            padding: 20px 50px;
+        }
         .popup-success-pay__main--title {
             font-size: 24px;
             font-weight: 700;
+            @media (max-width: 430px) {
+                font-size: 18px;
+            }
         }
         .popup-success-pay__main--subtitle {
             text-align: center;
             font-size: 22px;
+            @media (max-width: 430px) {
+                font-size: 14px;
+            }
         }
         .popup-success-pay__main--button {
             cursor: pointer;
@@ -1835,6 +1845,9 @@ footer {
             justify-content: center;
             height: 40px;
             border-radius: 5px;
+            @media (max-width: 430px) {
+                font-size: 14px;
+            }
         }
     }
     .popup-success-pay {
@@ -1844,7 +1857,7 @@ footer {
         top: 0;
         left: 0px;
         background-color: #626262;
-        z-index: 10;
+        z-index: 5;
         opacity: 20%;
         display: none;
         align-items: center;
@@ -1856,6 +1869,9 @@ footer {
     .popup-success-pay__main-active {
         display: flex;
     }
+}
+.body-pay {
+    overflow: hidden;
 }
 .pay {
     padding-top: 128px;

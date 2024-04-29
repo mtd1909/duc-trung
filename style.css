@@ -57,7 +57,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 999;
 }
 .header__desktop.sticky {
   background-color: rgba(0, 0, 0, 0.5);
@@ -92,7 +92,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 999;
   }
   .header__mobile .header__mobile--menubar {
     width: 36px;
@@ -1996,13 +1996,29 @@ footer {
   border-radius: 10px;
   display: none;
 }
+@media (max-width: 430px) {
+  .main-pay .popup-success-pay__main {
+    width: 370px;
+    padding: 20px 50px;
+  }
+}
 .main-pay .popup-success-pay__main .popup-success-pay__main--title {
   font-size: 24px;
   font-weight: 700;
 }
+@media (max-width: 430px) {
+  .main-pay .popup-success-pay__main .popup-success-pay__main--title {
+    font-size: 18px;
+  }
+}
 .main-pay .popup-success-pay__main .popup-success-pay__main--subtitle {
   text-align: center;
   font-size: 22px;
+}
+@media (max-width: 430px) {
+  .main-pay .popup-success-pay__main .popup-success-pay__main--subtitle {
+    font-size: 14px;
+  }
 }
 .main-pay .popup-success-pay__main .popup-success-pay__main--button {
   cursor: pointer;
@@ -2016,6 +2032,11 @@ footer {
   height: 40px;
   border-radius: 5px;
 }
+@media (max-width: 430px) {
+  .main-pay .popup-success-pay__main .popup-success-pay__main--button {
+    font-size: 14px;
+  }
+}
 .main-pay .popup-success-pay {
   position: absolute;
   width: 100%;
@@ -2023,7 +2044,7 @@ footer {
   top: 0;
   left: 0px;
   background-color: #626262;
-  z-index: 10;
+  z-index: 5;
   opacity: 20%;
   display: none;
   align-items: center;
@@ -2034,6 +2055,10 @@ footer {
 }
 .main-pay .popup-success-pay__main-active {
   display: flex;
+}
+
+.body-pay {
+  overflow: hidden;
 }
 
 .pay {

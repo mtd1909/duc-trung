@@ -12,7 +12,7 @@
     <title>Sản phẩm</title>
 </head>
 
-<body>
+<body id="body-pay">
     <!-- HEADER -->
     <div class="overlay" onclick="hideOverlay()"></div>
     <div class="popup__size" id="container_size">
@@ -292,7 +292,7 @@
                     </div>
                 </div>
                 <div class="pay-footer-mobile">
-                    <button class="pay-product-header-body__button-mobile">Thanh toán</button>
+                    <button class="pay-product-header-body__button-mobile" id="button-pay-mobile">Thanh toán</button>
                     <a href="">Quay lại giỏ hảng</a>
                 </div>
             </div>
@@ -350,47 +350,48 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="col1">
-            <img src="Images/logo.png" alt="">
-            <div>
-                <i class="fa fa-map"></i>
-                <p>15 Đường Y, Ngõ 86 Thị trấn Trâu quỳ,
-                    Gia Lâm, Hà Nội</p>
-            </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>090.327.1000</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p>quyet.dino@gmail.com</p>
-            </div>
-            <img src="Images/logo_bct.webp">
-        </div>
+        <div class="container">
+            <div class="footer">
+                <div class="col1">
+                    <img src="Images/logo.png" alt="">
+                    <div class="col-flex">
+                        <img src="/Images/icon-address.svg" alt="img">
+                        <p>15 Đường Y, Ngõ 86 Thị trấn Trâu quỳ, <br>
+                            Gia Lâm, Hà Nội</p>
+                    </div>
+                    <div class="col-flex">
+                        <img src="/Images/icon-phone.svg" alt="img">
+                        <p>090.327.1000</p>
+                    </div>
+                    <div class="col-flex">
+                        <img src="/Images/icon-massage.svg" alt="img">
+                        <p>quyet.dino@gmail.com</p>
+                    </div>
+                    <img src="Images/logo_bct.webp">
+                </div>
+                <div class="col23">
+                    <ul class="info">
+                        <div class="footer__title">CHÚNG TÔI</div>
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="">Sản phẩm</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Kiểm tra đơn hàng</a></li>
+                        <li><a href="">Giới thiệu</a></li>
+                    </ul>
 
-        <div class="col23">
-            <li>ABOUT US
-                <ul class="info">
-                    <li><a href="">Trang chủ</a></li>
-                    <li><a href="">Sản phẩm</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Kiểm tra đơn hàng</a></li>
-                    <li><a href="">Giới thiệu</a></li>
-                </ul>
-            </li>
-
-            <li>CHÍNH SÁCH
-                <ul class="info">
-                    <li><a href="">Chính sách mua hàng</a></li>
-                    <li><a href="">Chính sách bảo mật<a></li>
-                    <li><a href="">Phương thức thanh toán</a></li>
-                    <li><a href="">Chính sách vận chuyển</a></li>
-                    <li><a href="">Chính sách đổi trả</a></li>
-                </ul>
-            </li>
-        </div>
-        <div class="col4">
-            <img src="Images/map.png">
+                    <ul class="info">
+                        <div class="footer__title">CHÍNH SÁCH</div>
+                        <li><a href="">Chính sách mua hàng</a></li>
+                        <li><a href="">Chính sách bảo mật<a></li>
+                        <li><a href="">Phương thức thanh toán</a></li>
+                        <li><a href="">Chính sách vận chuyển</a></li>
+                        <li><a href="">Chính sách đổi trả</a></li>
+                    </ul>
+                </div>
+                <div class="col4">
+                    <img src="Images/map.png">
+                </div>
+            </div>
         </div>
     </footer>
     <script>
@@ -421,12 +422,20 @@
         const divPopupPaySuccessMain = document.getElementById('popup-success-pay-main')
 
         const idPaySuccess = {
+            'body-pay': 'body-pay',
             'main-pay-id': 'success-pay',
             'popup-success-pay-id': 'popup-success-pay-active',
             'popup-success-pay-main-id': 'popup-success-pay__main-active'
         }
         const addButtonPay = document.getElementById('button-pay');
         addButtonPay.addEventListener('click', () => {
+            for (const [id, className] of Object.entries(idPaySuccess)) {
+                const item = document.getElementById(id);
+                item.classList.add(className);
+            }
+        });
+        const addButtonPayMobile = document.getElementById('button-pay-mobile');
+        addButtonPayMobile.addEventListener('click', () => {
             for (const [id, className] of Object.entries(idPaySuccess)) {
                 const item = document.getElementById(id);
                 item.classList.add(className);
