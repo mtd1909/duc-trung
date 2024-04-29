@@ -21,21 +21,25 @@ window.addEventListener("scroll",function(){
 const headerMenu = document.querySelector('.header__menu')
 const overlay = document.querySelector('.overlay')
 const headerMobileMenubar = document.querySelector('.header__mobile--menubar')
+const body = document.querySelector('body')
 const showMenu = () => {
     overlay.classList.toggle('show')
     headerMenu.classList.toggle('show')
     headerMobileMenubar.classList.toggle('show')
+    body.classList.toggle('active')
 }
 
 const hideOverlay = () => {
     overlay.classList.remove('show')
     headerMenu.classList.remove('show')
     headerMobileMenubar.classList.remove('show')
+    body.classList.remove('active')
 }
 
 const showSuccessSignUp = () => {
     const popupLogin = document.querySelector('.popup__login')
     popupLogin.classList.add('show')
+    body.classList.add('active')
 }
 
 const showSize = () => {

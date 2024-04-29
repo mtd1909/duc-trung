@@ -354,16 +354,16 @@
                 <div class="col1">
                     <img src="Images/logo.png" alt="">
                     <div class="col-flex">
-                        <img src="/Images/icon-address.svg" alt="img">
+                        <img src="./Images/icon-address.svg" alt="img">
                         <p>15 Đường Y, Ngõ 86 Thị trấn Trâu quỳ, <br>
                             Gia Lâm, Hà Nội</p>
                     </div>
                     <div class="col-flex">
-                        <img src="/Images/icon-phone.svg" alt="img">
+                        <img src="./Images/icon-phone.svg" alt="img">
                         <p>090.327.1000</p>
                     </div>
                     <div class="col-flex">
-                        <img src="/Images/icon-massage.svg" alt="img">
+                        <img src="./Images/icon-massage.svg" alt="img">
                         <p>quyet.dino@gmail.com</p>
                     </div>
                     <img src="Images/logo_bct.webp">
@@ -442,16 +442,19 @@
         const headerMenu = document.querySelector('.header__menu')
         const overlay = document.querySelector('.overlay')
         const headerMobileMenubar = document.querySelector('.header__mobile--menubar')
+        const body = document.querySelector('body')
         const showMenu = () => {
             overlay.classList.toggle('show')
             headerMenu.classList.toggle('show')
             headerMobileMenubar.classList.toggle('show')
+            body.classList.toggle('active')
         }
 
         const hideOverlay = () => {
             overlay.classList.remove('show')
             headerMenu.classList.remove('show')
             headerMobileMenubar.classList.remove('show')
+            body.classList.remove('active')
         }
 
         const showSize = () => {

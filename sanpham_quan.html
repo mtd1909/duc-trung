@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/1147679ae7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Sản phẩm - Quần</title>
 </head>
+
 <body>
     <!-- HEADER -->
     <div class="overlay" onclick="hideOverlay()"></div>
@@ -75,7 +79,9 @@
                 <div class="list__item"><a href="sanpham_quan.html">Quần</a></div>
                 <li><a href="gioithieu.html">Giới thiệu</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><p onclick="showSize()">Bảng size</p></li>
+                <li>
+                    <p onclick="showSize()">Bảng size</p>
+                </li>
                 <li><a href="index.html" class="logout__active">Đăng xuất</a></li>
             </ul>
         </div>
@@ -90,81 +96,81 @@
                 <a href="./sanpham_quan.html" class="breadcrumb-page">quần</a>
             </div>
 
-            <div class="container">
-                <div class="product">
-                    <div class="product-left">
-                        <div class="product-left__category">
-                            <div class="product-left__header">
-                                <a href="" class="product-left__header--title">Danh mục</a>
-                                <i class="fa-solid fa-chevron-up"></i>
-                            </div>
-                            <div class="product-left__category-body">
-                                <a class="product-left__category-body--item product-left__category-body--item-active" href="sanpham_quan.html">Quần</a>
-                                <a class="product-left__category-body--item" href="sanpham_ao.html">Áo</a>
-                            </div>
+            <div class="product">
+                <div class="product-left">
+                    <div class="product-left__category">
+                        <div class="product-left__header">
+                            <a href="" class="product-left__header--title">Danh mục</a>
+                            <i class="fa-solid fa-chevron-up"></i>
                         </div>
-                        <div class="product-left__price-approx">
-                            <div class="product-left__header">
-                                <a href="" class="product-left__header--title">Khoảng giá</a>
-                                <i class="fa-solid fa-chevron-up"></i>
+                        <div class="product-left__category-body">
+                            <a class="product-left__category-body--item product-left__category-body--item-active"
+                                href="sanpham_quan.html">Quần</a>
+                            <a class="product-left__category-body--item" href="sanpham_ao.html">Áo</a>
+                        </div>
+                    </div>
+                    <div class="product-left__price-approx">
+                        <div class="product-left__header">
+                            <a href="" class="product-left__header--title">Khoảng giá</a>
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </div>
+                        <div class="product-left__price-approx-body">
+                            <div class="product-left__price-approx-body--input">
+                                <input type="text" placeholder="giá tối thiểu" id="min-price" />
+                                <div class="product-price-approx-line"></div>
+                                <input type="text" placeholder="giá tối đa" id="max-price" />
                             </div>
-                            <div class="product-left__price-approx-body">
-                                <div class="product-left__price-approx-body--input">
-                                    <input type="text" placeholder="giá tối thiểu" id="min-price"/>
-                                    <div class="product-price-approx-line"></div>
-                                    <input type="text" placeholder="giá tối đa" id="max-price"/>
-                                </div>
-                                <div class="product-left__price-approx-body--button">
-                                    <button id="delete-price">Xóa lọc</bu>
+                            <div class="product-left__price-approx-body--button">
+                                <button id="delete-price">Xóa lọc</bu>
                                     <button id="apply-price">Áp dụng</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-left__color">
-                            <div class="product-left__header">
-                                <a href="" class="product-left__header--title">Màu sắc</a>
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </div>
-                        </div>
-                        <div  class="product-left__size">
-                            <div class="product-left__header">
-                                <a href="" class="product-left__header--title">Kích cỡ</a>
-                                <i class="fa-solid fa-chevron-up"></i>
-                            </div>
-                            <div class="product-left__size-body">
-                                <div class="product-left__size-body--item" id="size-S">S</div>
-                                <div class="product-left__size-body--item product-left__size-body--item-active" id="size-M">M</div>
-                                <div class="product-left__size-body--item" id="size-L">L</div>
-                                <div class="product-left__size-body--item" id="size-XL">XL</div>
                             </div>
                         </div>
                     </div>
+                    <div class="product-left__color">
+                        <div class="product-left__header">
+                            <a href="" class="product-left__header--title">Màu sắc</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="product-left__size">
+                        <div class="product-left__header">
+                            <a href="" class="product-left__header--title">Kích cỡ</a>
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </div>
+                        <div class="product-left__size-body">
+                            <div class="product-left__size-body--item" id="size-S">S</div>
+                            <div class="product-left__size-body--item product-left__size-body--item-active" id="size-M">
+                                M</div>
+                            <div class="product-left__size-body--item" id="size-L">L</div>
+                            <div class="product-left__size-body--item" id="size-XL">XL</div>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="product-right">
+                <div class="product-right">
+                    <div class="product-right-top-item">
                         <div class="product-right-top-item">
-                            <div class="product-right-top-item">
-                                <p class="product-right-top-item-desktop"><i class="fa fa-list"></i> Sắp xếp theo</p>
-                                <p class="product-right-top-item-mobile">Các sản phẩm áo</p>
-                            </div>
+                            <p class="product-right-top-item-desktop"><i class="fa fa-list"></i> Sắp xếp theo</p>
+                            <p class="product-right-top-item-mobile">Các sản phẩm quần</p>
                         </div>
-    
-                        <div class="product-right-content" id="products">                            
+                    </div>
+
+                    <div class="product-right-content" id="products">
+                    </div>
+                    <div class="product-pagination pagination">
+                        <div class="pagination-item pagination-item-active">
+                            1
                         </div>
-                        <div class="product-pagination pagination">
-                            <div class="pagination-item pagination-item-active">
-                                1
-                            </div>
-                            <div class="pagination-item">
-                                2
-                            </div>
-                            <div class="pagination-item">
-                                3
-                            </div>
-                            <div class="pagination-item-arrow">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
+                        <div class="pagination-item">
+                            2
                         </div>
-                    </div>  
+                        <div class="pagination-item">
+                            3
+                        </div>
+                        <div class="pagination-item-arrow">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,7 +185,7 @@
                     <a href="sanpham.html" class="product-propose__title--button">Xem thêm</a>
                 </div>
                 <div class="product-propose__content" id="product3"></div>
-    
+
                 <div class="email-discount">
                     <div class="title">Đăng ký nhận tin khuyến mãi</div>
                     <div class="input-discount">
@@ -198,16 +204,16 @@
                 <div class="col1">
                     <img src="Images/logo.png" alt="">
                     <div class="col-flex">
-                        <img src="/Images/icon-address.svg" alt="img">
+                        <img src="./Images/icon-address.svg" alt="img">
                         <p>15 Đường Y, Ngõ 86 Thị trấn Trâu quỳ, <br>
                             Gia Lâm, Hà Nội</p>
                     </div>
                     <div class="col-flex">
-                        <img src="/Images/icon-phone.svg" alt="img">
+                        <img src="./Images/icon-phone.svg" alt="img">
                         <p>090.327.1000</p>
                     </div>
                     <div class="col-flex">
-                        <img src="/Images/icon-massage.svg" alt="img">
+                        <img src="./Images/icon-massage.svg" alt="img">
                         <p>quyet.dino@gmail.com</p>
                     </div>
                     <img src="Images/logo_bct.webp">
@@ -240,4 +246,5 @@
 
     <script src="js/sanpham_quan.js"></script>
 </body>
+
 </html>
