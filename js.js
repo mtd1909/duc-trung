@@ -126,7 +126,9 @@ let products = {
 
 for (let items of products.data){
     let card = document.createElement("a")
-    card.setAttribute("href", "./chitietsanpham.html");
+    if(!items.soldOut) {
+        card.setAttribute("href", "./chitietsanpham.html");
+    }
     card.classList.add("cartegory-right-content-item")
     if(items.soldOut) {
         card.classList.add("sold-out-item")
