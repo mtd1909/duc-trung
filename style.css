@@ -178,6 +178,11 @@ a {
 .header__menu .header__menu--list li a.logout__active {
   color: #D5231F;
 }
+.header__menu .header__menu--list li p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
 .header__menu .header__menu--list .list__item {
   color: #000;
   font-size: 16px;
@@ -854,6 +859,7 @@ footer {
   padding: 6px 24px;
   color: white;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 @media (max-width: 430px) {
   .cartegory-right-content-item .cartegory-image .sold-out {
@@ -2833,6 +2839,12 @@ footer {
 .login__mobile {
   padding-top: 180px;
   padding-bottom: 150px;
+  display: none;
+}
+@media (max-width: 430px) {
+  .login__mobile {
+    display: block;
+  }
 }
 .login__mobile .login__mobile--form {
   border-radius: 5px;
@@ -2945,5 +2957,11 @@ footer {
   .search__title .search__title--content {
     font-size: 12px;
     margin-top: 100px;
+    margin-bottom: -20px;
   }
+}
+
+.space {
+  height: 20px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
