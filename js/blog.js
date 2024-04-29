@@ -40,7 +40,8 @@ let post = {
 }
 
 for (let items of post.data){
-    let card = document.createElement('div')
+    let card = document.createElement('a')
+    card.setAttribute("href", "./chitietblog.html");
     card.classList.add('blog-item')
 
     let image = document.createElement("img")

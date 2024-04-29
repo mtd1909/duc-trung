@@ -12,54 +12,57 @@
     <!-- HEADER -->
     <header>
         <div class="header__desktop">
-            <div class="logo">
-                <img src="Images/logo.png">
-            </div>
-            <div class="menu">
-                <li><a href="#" id="active-menu">TRANG CHỦ</a></li>
-                <li><a href="sanpham.html">SẢN PHẨM</a>
-                    <ul class="sub-menu">
-                        <li><a href="sanpham_ao.html">Áo</a>
-                            <ul>
-                                <li>Áo Polo</li>
-                                <li>Áo Hoodie</li>
-                            </ul>
+            <div class="container">
+                <div class="header__desktop--wrap">
+                    <div class="logo">
+                        <img src="Images/logo.png">
+                    </div>
+                    <div class="menu">
+                        <li><a href="index.html" id="active-menu">TRANG CHỦ</a></li>
+                        <li><a href="sanpham.html">SẢN PHẨM</a></li>
+                        <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                    </div>
+                    <div class="others">
+                        <li class="search">
+                            <input type="text" placeholder="Tìm kiếm">
+                            <img src="./Images/icon_search.svg" alt="img">
                         </li>
-                        <li><a href="sanpham_quan.html">Quần</a>
-                            <ul>
-                                <li>Quần Short</li>
-                                <li>Quần dài</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-            </div>
-            <div class="others">
-                <li class="search">
-                    <input type="text" placeholder="   Tìm kiếm">
-                    <i class="fas fa-search"></i>
-                </li>
-                <li class="icon"><a href="dangnhap.html"><i class="fas fa-user"></i></a></li>
-                <li class="icon"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                        <li class="icon"><a href="dangnhap.html"><img src="./Images/icon-user.svg" alt="img"></a></li>
+                        <li class="icon"><a href=""><img src="./Images/icon_cart.svg" alt="img"></a></li>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="header__mobile">
-            <div class="header__mobile--menubar">
-                <i class="fa-solid fa-bars"></i>
+            <div class="header__mobile--menubar" onclick="showMenu()">
+                <img src="./Images/menu-bar.svg" alt="img">
+                <i class="fa-solid fa-xmark"></i>
             </div>
             <div class="header__mobile--logo">
-                <img src="Images/logo.png">
+                <img src="./Images/logo.png">
             </div>
             <div class="header__mobile--function">
-                <div class="function__search">
-                    <i class="fas fa-search"></i>
-                </div>
                 <div class="function__cart">
-                    <i class="fas fa-shopping-cart"></i>
+                    <img src="./Images/icon_cart.svg" alt="img">
                 </div>
             </div>
+        </div>
+        <div class="header__menu">
+            <div class="header__menu--search">
+                <img src="./Images/icon_search.svg" alt="img">
+                <input type="text" placeholder="Tìm kiếm">
+            </div>
+            <ul class="header__menu--list">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <div class="list__item"><a href="sanpham_ao.html">Áo</a></div>
+                <div class="list__item"><a href="sanpham_quan.html">Quần</a></div>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><div onclick="showSize()">Bảng size</div></li>
+                <li><a href="dangnhap.html" class="login__active">Đăng nhập</a></li>
+            </ul>
         </div>
     </header>
 
@@ -67,9 +70,9 @@
     <section class="cartegory">
         <div class="container">
             <div class="breadcrumb">
-                <a href="#" class="breadcrumb__sub-page">trang chủ </a>
-                <a href="#" class="breadcrumb__sub-page-second">sản phẩm</a>
-                <a href="#" class="breadcrumb-page">quần</a>
+                <a href="./index.html" class="breadcrumb__sub-page">trang chủ </a>
+                <a href="./sanpham.html" class="breadcrumb__sub-page-second">sản phẩm</a>
+                <a href="./sanpham_quan.html" class="breadcrumb-page">quần</a>
             </div>
 
             <div class="container">
@@ -175,47 +178,48 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="col1">
-            <img src="Images/logo.png" alt="">
-            <div>
-                <i class="fa fa-map"></i>
-                <p>15 Đường Y, Ngõ 86 Thị trấn Trâu quỳ,
-                    Gia Lâm, Hà Nội</p>
-            </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>090.327.1000</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p>quyet.dino@gmail.com</p>
-            </div>
-            <img src="Images/logo_bct.webp">
-        </div>
+        <div class="container">
+            <div class="footer">
+                <div class="col1">
+                    <img src="Images/logo.png" alt="">
+                    <div class="col-flex">
+                        <img src="/Images/icon-address.svg" alt="img">
+                        <p>15 Đường Y, Ngõ 86 Thị trấn Trâu quỳ, <br>
+                            Gia Lâm, Hà Nội</p>
+                    </div>
+                    <div class="col-flex">
+                        <img src="/Images/icon-phone.svg" alt="img">
+                        <p>090.327.1000</p>
+                    </div>
+                    <div class="col-flex">
+                        <img src="/Images/icon-massage.svg" alt="img">
+                        <p>quyet.dino@gmail.com</p>
+                    </div>
+                    <img src="Images/logo_bct.webp">
+                </div>
+                <div class="col23">
+                    <ul class="info">
+                        <div class="footer__title">CHÚNG TÔI</div>
+                        <li><a href="">Trang chủ</a></li>
+                        <li><a href="">Sản phẩm</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Kiểm tra đơn hàng</a></li>
+                        <li><a href="">Giới thiệu</a></li>
+                    </ul>
 
-        <div class="col23">
-            <li>ABOUT US
-                <ul class="info">
-                    <li><a href="">Trang chủ</a></li>
-                    <li><a href="">Sản phẩm</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Kiểm tra đơn hàng</a></li>
-                    <li><a href="">Giới thiệu</a></li>
-                </ul>
-            </li>
-
-            <li>CHÍNH SÁCH
-                <ul class="info">
-                    <li><a href="">Chính sách mua hàng</a></li>
-                    <li><a href="">Chính sách bảo mật<a></li>
-                    <li><a href="">Phương thức thanh toán</a></li>
-                    <li><a href="">Chính sách vận chuyển</a></li>
-                    <li><a href="">Chính sách đổi trả</a></li>
-                </ul>
-            </li>
-        </div>
-        <div class="col4">
-            <img src="Images/map.png">
+                    <ul class="info">
+                        <div class="footer__title">CHÍNH SÁCH</div>
+                        <li><a href="">Chính sách mua hàng</a></li>
+                        <li><a href="">Chính sách bảo mật<a></li>
+                        <li><a href="">Phương thức thanh toán</a></li>
+                        <li><a href="">Chính sách vận chuyển</a></li>
+                        <li><a href="">Chính sách đổi trả</a></li>
+                    </ul>
+                </div>
+                <div class="col4">
+                    <img src="Images/map.png">
+                </div>
+            </div>
         </div>
     </footer>
 
