@@ -706,6 +706,10 @@ footer {
   background-color: #111111;
   color: white;
 }
+.product .product-left .product-left__size .product-left__size-body .product-left__size-body--item:nth-child(4) {
+  border: 1px solid #D0D0D0;
+  color: #D0D0D0;
+}
 .product .product-right .product-right-top-item {
   font-size: 20px;
   font-weight: 700;
