@@ -79,7 +79,9 @@
                 <div class="list__item"><a href="sanpham_quan.html">Quần</a></div>
                 <li><a href="gioithieu.html">Giới thiệu</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><p onclick="showSize()">Bảng size</p></li>
+                <li>
+                    <p onclick="showSize()">Bảng size</p>
+                </li>
                 <li><a href="index.html" class="logout__active">Đăng xuất</a></li>
             </ul>
         </div>
@@ -177,8 +179,8 @@
                             </div>
                         </div>
                         <div class="pay-product-header-body__discount">
-                            <input type="text" placeholder="Nhập mã giảm giá" />
-                            <button class="pay-product-header-body__discount-button">Áp dụng</button>
+                            <input type="text" placeholder="Nhập mã giảm giá" id="input_discount" />
+                            <button class="pay-product-header-body__discount-button button_discount">Áp dụng</button>
                         </div>
                         <div class="pay-product-header-body__table-price">
                             <div class="pay-product-header-body__table-price--item">
@@ -452,7 +454,7 @@
             headerMenu.classList.remove('show')
             headerMobileMenubar.classList.remove('show')
         }
-        
+
         const showSize = () => {
             const popupSize = document.querySelector('.popup__size')
             popupSize.classList.add('show')
@@ -476,6 +478,14 @@
         function search() {
             window.location.href = 'timkiem.html'
         }
+        const buttonDiscount = document.querySelector('.button_discount')
+        document.getElementById("input_discount").addEventListener("input", function () {
+            if (this.value.trim() !== "") {
+                buttonDiscount.classList.add('active')
+            } else {
+                buttonDiscount.classList.remove('active')
+            }
+        });
     </script>
 </body>
 
