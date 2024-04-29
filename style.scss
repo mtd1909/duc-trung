@@ -30,6 +30,12 @@ a {
     text-transform: none !important;
 }
 
+body {
+    &.active {
+        overflow: hidden;
+    }
+}
+
 .button {
     height: 48px;
     width: 100%;
