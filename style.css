@@ -2805,7 +2805,7 @@ footer {
   padding-bottom: 20px;
 }
 
-.popup__login {
+.popup__login, .popup__size {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
@@ -2817,11 +2817,11 @@ footer {
   visibility: hidden;
   opacity: 0;
 }
-.popup__login.show {
+.popup__login.show, .popup__size.show {
   visibility: visible;
   opacity: 1;
 }
-.popup__login .popup-success {
+.popup__login .popup-success, .popup__size .popup-success {
   width: 390px;
   padding-top: 30px;
   padding-bottom: 40px;
@@ -2832,12 +2832,12 @@ footer {
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
 }
-.popup__login .popup-success .popup-success__title {
+.popup__login .popup-success .popup-success__title, .popup__size .popup-success .popup-success__title {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 40px;
 }
-.popup__login .popup-success .button {
+.popup__login .popup-success .button, .popup__size .popup-success .button {
   width: 212px;
   font-size: 16px;
   font-weight: 400;
