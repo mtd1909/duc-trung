@@ -26,15 +26,15 @@
                         <img src="Images/logo.png">
                     </div>
                     <div class="menu">
-                        <li><a href="index.html">TRANG CHỦ</a></li>
+                        <li><a href="trangchu-dadangnhap.html">TRANG CHỦ</a></li>
                         <li><a href="sanpham.html">SẢN PHẨM</a></li>
                         <li><a href="gioithieu.html">GIỚI THIỆU</a></li>
                         <li><a href="blog.html">BLOG</a></li>
                     </div>
                     <div class="others">
                         <li class="search">
-                            <input type="text" placeholder="Tìm kiếm">
-                            <img src="./Images/icon_search.svg" alt="img">
+                            <input type="text" placeholder="Tìm kiếm" onkeydown="checkEnter(event)">
+                            <img src="./Images/icon_search.svg" alt="img" onclick="search()">
                         </li>
                         <li class="icon avatar">
                             <img src="./Images/header-avatar.svg" alt="img">
@@ -60,7 +60,7 @@
             <div class="header__mobile--function">
                 <a href="giohang.html" class="function__cart">
                     <img src="./Images/icon_cart.svg" alt="img">
-                </div>
+                </a>
             </div>
         </div>
         <div class="header__menu">
@@ -69,17 +69,17 @@
                 <p class="">Đức Thọ</p>
             </div>
             <div class="header__menu--search">
-                <img src="./Images/icon_search.svg" alt="img">
-                <input type="text" placeholder="Tìm kiếm">
+                <img src="./Images/icon_search.svg" alt="img" onclick="search()">
+                <input type="text" placeholder="Tìm kiếm" onkeydown="checkEnter(event)">
             </div>
             <ul class="header__menu--list">
-                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="trangchu-dadangnhap.html">Trang chủ</a></li>
                 <li><a href="sanpham.html">Sản phẩm</a></li>
                 <div class="list__item"><a href="sanpham_ao.html">Áo</a></div>
                 <div class="list__item"><a href="sanpham_quan.html">Quần</a></div>
                 <li><a href="gioithieu.html">Giới thiệu</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="sanpham.html">Bảng size</a></li>
+                <li><div onclick="showSize()">Bảng size</div></li>
                 <li><a href="index.html" class="logout__active">Đăng xuất</a></li>
             </ul>
         </div>
@@ -88,36 +88,38 @@
     <!-- PRODUCTS CONTAINER -->
     <div class="search__title">
         <div class="container">
-            Tìm thấy 8 kết quả cho từ khoá “quần short”
+            <div class="breadcrumb">
+                <a href="./trangchu-dadangnhap.html" class="breadcrumb__sub-page">trang chủ </a>
+                <a href="./sanpham.html" class="breadcrumb__sub-page-second">sản phẩm</a>
+                <a href="./sanpham_quan.html" class="breadcrumb-page">quần</a>
+            </div>
+            <div class="search__title--content">Tìm thấy 8 kết quả cho từ khoá “quần short”</div>
         </div>
     </div>
     <section class="container">
         <div class="product-propose">
-            <div class="product-propose__title">
-                <div class="product-propose__title--name">Sản phẩm bán chạy</div>
-                <a href="sanpham.html" class="product-propose__title--button">Xem thêm</a>
-            </div>
             <div class="product-propose__content" id="product1">
             </div>
-            <div class="product-propose__button">Xem thêm</div>
         </div>
-        <div class="product-propose">
-            <div class="product-propose__title">
-                <div class="product-propose__title--name">Sản phẩm mới</div>
-                <a href="sanpham.html" class="product-propose__title--button">Xem thêm</a>
+    </section>
+
+    <section class="main-gray" id="blog-container">
+        <div class="container">
+            <div class="product-propose">
+                <div class="product-propose__title">
+                    <div class="product-propose__title--name">Sản phẩm đề xuất</div>
+                    <a href="sanpham.html" class="product-propose__title--button">Xem thêm</a>
+                </div>
+                <div class="product-propose__content" id="product3"></div>
+    
+                <div class="email-discount">
+                    <div class="title">Đăng ký nhận tin khuyến mãi</div>
+                    <div class="input-discount">
+                        <input type="text" placeholder="Nhập email đăng ký">
+                        <button>Đăng ký</button>
+                    </div>
+                </div>
             </div>
-            <div class="product-propose__content" id="product2">
-            </div>
-            <div class="product-propose__button">Xem thêm</div>
-        </div>
-        <div class="product-propose">
-            <div class="product-propose__title">
-                <div class="product-propose__title--name">Sản phẩm giá tốt</div>
-                <a href="sanpham.html" class="product-propose__title--button">Xem thêm</a>
-            </div>
-            <div class="product-propose__content" id="product3">
-            </div>
-            <div class="product-propose__button">Xem thêm</div>
         </div>
     </section>
 
