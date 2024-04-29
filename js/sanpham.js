@@ -18,6 +18,49 @@ window.addEventListener("scroll",function(){
 //     }) 
 // })
 
+const headerMenu = document.querySelector('.header__menu')
+const overlay = document.querySelector('.overlay')
+const headerMobileMenubar = document.querySelector('.header__mobile--menubar')
+const showMenu = () => {
+    overlay.classList.toggle('show')
+    headerMenu.classList.toggle('show')
+    headerMobileMenubar.classList.toggle('show')
+}
+
+const hideOverlay = () => {
+    overlay.classList.remove('show')
+    headerMenu.classList.remove('show')
+    headerMobileMenubar.classList.remove('show')
+}
+
+const showSuccessSignUp = () => {
+    const popupLogin = document.querySelector('.popup__login')
+    popupLogin.classList.add('show')
+}
+
+const showSize = () => {
+    const popupSize = document.querySelector('.popup__size')
+    popupSize.classList.add('show')
+}
+
+document.getElementById("container_size")?.addEventListener("click", function(event) {
+    const popupSize = document.querySelector('.popup__size')
+    if (event.target.id === "image_size") {
+        event.stopPropagation();
+    } else {
+        popupSize.classList.remove('show')
+    }
+});
+
+function checkEnter(event) {
+    if (event.key === "Enter") {
+        window.location.href = 'timkiem.html'
+    }
+}
+
+function search() {
+    window.location.href = 'timkiem.html'
+}
 
 let products = {
     data: [
