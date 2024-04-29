@@ -2924,5 +2924,11 @@ footer {
   .search__title .search__title--content {
     font-size: 12px;
     margin-top: 100px;
+    margin-bottom: -20px;
   }
+}
+
+.space {
+  height: 20px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
