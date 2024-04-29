@@ -178,6 +178,11 @@ a {
 .header__menu .header__menu--list li a.logout__active {
   color: #D5231F;
 }
+.header__menu .header__menu--list li p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
 .header__menu .header__menu--list .list__item {
   color: #000;
   font-size: 16px;
