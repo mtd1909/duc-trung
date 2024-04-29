@@ -12,7 +12,7 @@
     <title>Sản phẩm</title>
 </head>
 
-<body>
+<body id="body-pay">
     <!-- HEADER -->
     <div class="overlay" onclick="hideOverlay()"></div>
     <div class="popup__size" id="container_size">
@@ -420,6 +420,7 @@
         const divPopupPaySuccessMain = document.getElementById('popup-success-pay-main')
 
         const idPaySuccess = {
+            'body-pay': 'body-pay',
             'main-pay-id': 'success-pay',
             'popup-success-pay-id': 'popup-success-pay-active',
             'popup-success-pay-main-id': 'popup-success-pay__main-active'
