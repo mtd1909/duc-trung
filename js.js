@@ -44,6 +44,16 @@ document.getElementById("container_size")?.addEventListener("click", function(ev
     }
 });
 
+function checkEnter(event) {
+    if (event.key === "Enter") {
+        window.location.href = 'timkiem.html'
+    }
+}
+
+function search() {
+    window.location.href = 'timkiem.html'
+}
+
 // -------------------------------------------Slider
 const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
 const imgContainer = document.querySelector(".aspect-ratio-169")
