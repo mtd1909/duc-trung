@@ -2553,6 +2553,10 @@ footer {
 .login__mobile {
     padding-top: 180px;
     padding-bottom: 150px;
+    display: none;
+    @media (max-width: 430px) {
+        display: block;
+    }
     .login__mobile--form {
         border-radius: 5px;
         box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);

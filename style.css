@@ -2812,6 +2812,12 @@ footer {
 .login__mobile {
   padding-top: 180px;
   padding-bottom: 150px;
+  display: none;
+}
+@media (max-width: 430px) {
+  .login__mobile {
+    display: block;
+  }
 }
 .login__mobile .login__mobile--form {
   border-radius: 5px;
