@@ -33,8 +33,8 @@
                     </div>
                     <div class="others">
                         <li class="search">
-                            <input type="text" placeholder="Tìm kiếm">
-                            <img src="./Images/icon_search.svg" alt="img">
+                            <input type="text" placeholder="Tìm kiếm" onkeydown="checkEnter(event)">
+                            <img src="./Images/icon_search.svg" onclick="search()" alt="img">
                         </li>
                         <li class="icon"><a href="dangnhap.html"><img src="./Images/icon-user.svg" alt="img"></a></li>
                         <li class="icon"><a href=""><img src="./Images/icon_cart.svg" alt="img"></a></li>
@@ -58,8 +58,8 @@
         </div>
         <div class="header__menu">
             <div class="header__menu--search">
-                <img src="./Images/icon_search.svg" alt="img">
-                <input type="text" placeholder="Tìm kiếm">
+                <img src="./Images/icon_search.svg" alt="img" onclick="search()">
+                <input type="text" placeholder="Tìm kiếm" onkeydown="checkEnter(event)">
             </div>
             <ul class="header__menu--list">
                 <li><a href="index.html">Trang chủ</a></li>
